@@ -1,5 +1,59 @@
-# Checklist for ROS 2 Iron Tutorial Party
+# ROS 2 Iron Tutorial Party
+Welcome! The purpose of this repository is to guide the testing of various functionalities of ROS 2 Iron Irwini prior to official release.
+In other words, welcome to the Tutorial Party!
 
+## Who can contribute?
+Everyone, all contributions are welcome!
+
+## How to contribute?
+The [Issues](https://github.com/osrf/ros2_test_cases/issues) page has several tickets each containing specific instructions to test a particular functionality of ROS 2 Iron Irwini.
+Each ticket will have the following sections:
+
+1. **Setup**: Details on the desired hardware and software setup for this test. The following combinations are possible.
+   1. DDS vendor: `FASTDDS`, `CYCLONEDDS` or `CONNEXTDDS`
+   2. BuildType: `binary`, `debian` or `source`
+   3. Os: `Ubuntu Jammy`, `Windows` and `RHEL-9`
+   4. Chip: `Amd64` or `Arm64`
+2. **Links**: Any relevant references for this test.
+3. **Checks**: A list of functionalities to validate.
+
+To contribute, first ensure if you have the relevant setup as described in the ticket. Next, assign the ticket to yourself via the `Assignees` option or comment on the ticket indicating your interest. Then follow the instructions to perform the necessary checks.
+
+**All checks passed?**
+Great! Please tick the checkboxes if you can or else leave a comment indicating your successful testing. Attaching your terminal output (codeblock comment or gist file) as a form of verification is greatly appreciated.
+If you have the necessary permission, go ahead and close the ticket by clicking `Close as completed`.
+
+**Encountered failures?**
+If one or more checks fail, please provide the error message in a codeblock comment or as a gist file attachment.
+
+## What to prioritize?
+The goal is to close all tickets after successful validation. But we would like to prioritize the following sets in order:
+
+> **Note**: If you have access to a `Windows` machine, please prioritize testing on `Windows`. The next priority is `RHEL-9` followed by `Ubuntu Jammy`.
+
+- [ ] [Tutorials from docs.ros.org](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Adocs)
+  - [ ] [Installation on various plarforms](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Ainstallation+)
+  - [ ] [Beginner CLI](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Abeginner-cli-tools+)
+  - [ ] [Beginner Client Libraries](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Abeginner-client-libraries+)
+  - [ ] [Intermediate](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Aintermediate+)
+  - [ ] [Advanced](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Aadvanced+)
+- [ ] [Core functionality](https://github.com/osrf/ros2_test_cases/labels/core)
+  - [ ] [jammy, debian](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Ajammy+label%3Adebian)
+  - [ ] [jammy, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Ajammy+label%3Abinary+)
+  - [ ] [windows, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Awindows+label%3Abinary)
+  - [ ] [windows, source]()
+  - [ ] [rhel, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22rhel+9%22+)
+- [ ] [Features](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+)
+  - [ ] [jammy](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3Ajammy+)
+  - [ ] [windows](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3Awindows+)
+
+
+## What if I want to test something else?
+If you would like to test the functionality of any other package or extend the capabilities tested above, please open additional tickets while following the format described above.
+
+---
+
+### Tickets filtered by Setup
 - [ ] [fastdds, debian, jammy, amd64](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22fastdds%22+label:%22debian%22+label:%22jammy%22+label:%22amd64%22+label:%22generation-1%22)
 
   <details><summary>Labels</summary>
