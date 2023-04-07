@@ -32,7 +32,7 @@ The goal is to close all tickets after successful validation. But we would like 
 > **Note**: If you have access to a `Windows` machine, please prioritize testing on `Windows`. The next priority is `RHEL-9` followed by `Ubuntu Jammy`.
 
 - [ ] [Tutorials from docs.ros.org](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Adocs)
-  - [ ] [Installation on various plarforms](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Ainstallation+)
+  - [ ] [Installation on various platforms](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Ainstallation+)
   - [ ] [Beginner CLI](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Abeginner-cli-tools+)
   - [ ] [Beginner Client Libraries](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Abeginner-client-libraries+)
   - [ ] [Intermediate](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Aintermediate+)
