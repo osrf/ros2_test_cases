@@ -51,6 +51,9 @@ The goal is to close all tickets after successful validation. But we would like 
 ## What if I want to test something else?
 If you would like to test the functionality of any other package or extend the capabilities tested above, please open additional tickets while following the format described above.
 
+## Questions
+Questions related to testing may be posted on the [Discussions](https://github.com/osrf/ros2_test_cases/discussions) board. Kindly ensure to link the relevant issue ticket when starting a new discussion.
+
 ---
 
 ### Tickets filtered by Setup
