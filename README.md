@@ -17,7 +17,10 @@ Each ticket will have the following sections:
 2. **Links**: Any relevant references for this test.
 3. **Checks**: A list of functionalities to validate.
 
-To contribute, first ensure if you have the relevant setup as described in the ticket. Next, assign the ticket to yourself via the `Assignees` option or comment on the ticket indicating your interest. Then follow the instructions to perform the necessary checks.
+To contribute, first ensure if you have the relevant setup as described in the ticket.
+If you don't have the setup, you can find the installation instructions at http://docs.ros.org/en/iron/Installation.html.
+Next, assign the ticket to yourself via the `Assignees` option or comment on the ticket indicating your interest.
+Then follow the instructions to perform the necessary checks.
 
 **All checks passed?**
 Great! Please tick the checkboxes if you can or else leave a comment indicating your successful testing. Attaching your terminal output (codeblock comment or gist file) as a form of verification is greatly appreciated.
