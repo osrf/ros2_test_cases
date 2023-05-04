@@ -47,7 +47,7 @@ The goal is to close all tickets after successful validation. But we would like 
   - [ ] [jammy, debian](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Ajammy+label%3Adebian)
   - [ ] [jammy, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Ajammy+label%3Abinary+)
   - [ ] [windows, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Awindows+label%3Abinary)
-  - [ ] [windows, source]()
+  - [ ] [windows, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Awindows+label%3Asource)
   - [ ] [rhel, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22rhel+9%22+)
 - [ ] [Features](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+)
   - [ ] [jammy](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3Ajammy+)
