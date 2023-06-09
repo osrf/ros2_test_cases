@@ -1,0 +1,42 @@
+requirements:
+  - name: Topic executables in `demo_nodes_py`
+    labels:
+      - executable
+      - feature
+      - demos-py
+    checks:
+      - name: Check `listener` and `talker`
+        try:
+          - stdin: ros2 run demo_nodes_py talker
+            terminal: 1
+          - stdin: ros2 run demo_nodes_py listener
+            terminal: 2
+      - name: Check `listener` and `talker` QOS
+        try:
+          - stdin: ros2 run demo_nodes_py talker_qos
+            terminal: 1
+          - stdin: ros2 run demo_nodes_py listener_qos
+            terminal: 2
+      - name: Check serialized `listener` and `talker`
+        try:
+          - stdin: ros2 run demo_nodes_py talker
+            terminal: 1
+          - stdin: ros2 run demo_nodes_py listener_serialized
+            terminal: 2
+  - name: Service executables in `demo_nodes_py`
+    labels:
+      - executable
+      - feature
+    checks:
+      - name: Add two ints
+        try:
+          - stdin: ros2 run demo_nodes_py add_two_ints_client
+            terminal: 1
+          - stdin: ros2 run demo_nodes_py add_two_ints_server
+            terminal: 2
+      - name: Add two ints sync
+        try:
+          - stdin: ros2 run demo_nodes_py add_two_ints_client_sync
+            terminal: 1
+          - stdin: ros2 run demo_nodes_py add_two_ints_server
+            terminal: 2

@@ -1,0 +1,19 @@
+requirements:
+  - name: Check Lifecyle node py
+    labels:
+      - executable
+      - feature
+      - new-to-humble
+      - demos-py
+    links:
+      - name: Lifecycle Py
+        url: https://github.com/ros2/demos/tree/humble/lifecycle_py
+    checks:
+      - name: Check `listener` and `talker`
+        try:
+          - stdin: ros2 run lifecycle_py lifecycle_talker
+            terminal: 1
+          - stdin: ros2 run lifecycle lifecycle_listener
+            terminal: 2
+          - stdin: ros2 run lifecycle lifecycle_service_client
+            terminal: 3

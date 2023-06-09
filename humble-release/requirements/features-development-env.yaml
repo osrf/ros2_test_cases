@@ -1,0 +1,7 @@
+requirements:
+  - name: Sane development environment
+    labels:
+      - feature
+      - development
+    checks:
+      - name: Test message generation with .msg, .srv, .action, and .idl on top of the installed environment

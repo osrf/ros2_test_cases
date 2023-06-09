@@ -1,0 +1,66 @@
+requirements:
+  - name: 'ros_gz: ros_ign_bridge README - noetic'
+    links:
+      - name: Source
+        url: https://github.com/gazebosim/ros_gz/tree/noetic/ros_ign_bridge/README.md
+    checks:
+      - name: Instructions work
+      - name: Images (if there are any) match the result
+    labels:
+      - ros_gz
+      - garden
+      - noetic
+  - name: 'ros_gz: ros_ign_gazebo_demos README - noetic'
+    links:
+      - name: Source
+        url: https://github.com/gazebosim/ros_gz/tree/noetic/ros_ign_gazebo_demos/README.md
+    checks:
+      - name: Instructions work
+      - name: Images (if there are any) match the result
+    labels:
+      - ros_gz
+      - garden
+      - noetic
+  - name: 'ros_gz: ros_gz_bridge README - rolling'
+    links:
+      - name: Source
+        url: https://github.com/gazebosim/ros_gz/blob/ros2/ros_gz_bridge/README.md
+    checks:
+      - name: Instructions work
+      - name: Images (if there are any) match the result
+    labels:
+      - ros_gz
+      - garden
+      - rolling
+  - name: 'ros_gz: ros_gz_sim_demos README - rolling'
+    links:
+      - name: Source
+        url: https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_sim_demos/README.md
+    checks:
+      - name: Instructions work
+      - name: Images (if there are any) match the result
+    labels:
+      - ros_gz
+      - garden
+      - rolling
+  - name: 'gz_ros2_control: ign_ros2_control'
+    links:
+      - name: Source
+        url: https://github.com/ros-controls/gz_ros2_control/tree/master/ign_ros2_control
+    checks:
+      - name: Instructions work
+      - name: Images (if there are any) match the result
+    labels:
+      - gz_ros2_control
+      - garden
+      - rolling
+  - name: 'gz_ros2_control: ign_ros2_control_demos'
+    links:
+      - name: Source
+        url: https://github.com/ros-controls/gz_ros2_control/tree/master/ign_ros2_control_demos
+    checks:
+      - name: Demos works
+    labels:
+      - gz_ros2_control
+      - garden
+      - rolling

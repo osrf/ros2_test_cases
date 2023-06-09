@@ -1,0 +1,215 @@
+requirements:
+  - name: ros2cli on a local machine
+    description: |
+      Test the basic functionality of the ros2cli package family
+    labels:
+      - ros2cli
+      - local
+      - core
+    links:
+      - name: Repo URL
+        url: https://github.com/ros2/ros2cli
+    checks:
+      - name: Help text
+        description: |
+          Long-form help text should be available when invoking `ros2 --help` as well as `ros2 <command> --help`
+        try:
+          - stdin: ros2 -h
+          - stdin: ros2 --help
+          - stdin: ros2 topic -h
+          - stdin: ros2 topic --help
+        expect:
+          - note: Long-form help is available.
+      - name: Tab completion
+        description: |
+          When using a supported shell (i.e. bash), tab completion should work for both the bare executable to list commands and for listing sub-commands, like `ros2 <tab>` or `ros2 <command> tab`
+        try:
+          - stdin: ros2 <tab><tab>
+            note: Lists the commands
+          - stdin: ros2 lau<tab>
+            note: Completes the word `launch`
+          - stdin: ros2 launch dem<tab>
+            note: Completes until `demo_nodes_`
+          - stdin: ros2 launch demo_nodes_c<tab>
+            note: Completes the package `demo_nodes_cpp`
+          - stdin: ros2 launch demo_nodes_cpp <tab><tab>
+            note: Lists launch files in `demo_nodes_cpp`
+          - stdin: ros2 launch demo_nodes_cpp ta<tab>
+            note: Suggests the launch files name `talker_listener`
+          - stdin: ros2 launch demo_nodes_cpp talker_listener<tab><tab>
+            note: Lists several launch files that start with `talker_listener`
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.p<tab>
+            note: Completes the launch files name `talker_listener.launch.py`
+        expect:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+            note: You eventually get to the full command
+      - name: Node discovery
+        description: |
+          With another node running, use `ros2 node list` to ensure that the expected node is listed. Then stop the node and ensure that the list operation no longer shows the node.
+        try:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+            terminal: 1
+          - stdin: ros2 node list
+            terminal: 2
+        expect:
+          - stdout: |
+              /listener
+              /talker
+            terminal: 2
+      - name: Topic discovery
+        description: |
+          With another node running, use `ros2 topic list` to ensure that the expected topics are listed. Then stop the node and ensure that the list operation no longer shows the node's topics.
+        try:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+            terminal: 1
+          - stdin: ros2 topic list
+            terminal: 2
+        expect:
+          - stdout: |
+              /chatter
+              /parameter_events
+              /rosout
+            terminal: 2
+      - name: Service discovery
+        description: |
+          With another node running, use `ros2 service list` to ensure that the expected services are listed. Then stop the node and ensure that the list operation no longer shows the node's services.
+        try:
+          - stdin: ros2 run demo_nodes_cpp add_two_ints_server
+            terminal: 1
+          - stdin: ros2 service list
+            terminal: 2
+        expect:
+          - stdout: |
+              /add_two_ints
+              /add_two_ints_server/describe_parameters
+              /add_two_ints_server/get_parameter_types
+              /add_two_ints_server/get_parameters
+              /add_two_ints_server/list_parameters
+              /add_two_ints_server/set_parameters
+              /add_two_ints_server/set_parameters_atomically
+            terminal: 2
+      - name: Parameter discovery
+        description: |
+          With another node running, use `ros2 param list` to ensure that the expected parameters are listed. Then stop the node and ensure that the list operation no longer shows the node's parameters.
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param list
+            terminal: 2
+        expect:
+          - stdout: |
+              /turtlesim:
+                background_b
+                background_g
+                background_r
+                qos_overrides./parameter_events.publisher.depth
+                qos_overrides./parameter_events.publisher.durability
+                qos_overrides./parameter_events.publisher.history
+                qos_overrides./parameter_events.publisher.reliability
+                use_sim_time
+            terminal: 2
+  - name: ros2cli network tests
+    description: |
+      Test the basic functionality of the ros2cli package family in an environment where nodes are running on other machines on the network.
+    labels:
+      - ros2cli
+      - core
+    links:
+      - name: Repo URL
+        url: https://github.com/ros2/ros2cli
+    checks:
+      - name: Node discovery
+        description: |
+          With another node running, use `ros2 node list` to ensure that the expected node is listed. Then stop the node and ensure that the list operation no longer shows the node.
+      - name: Topic discovery
+        description: |
+          With another node running, use `ros2 topic list` to ensure that the expected topics are listed. Then stop the node and ensure that the list operation no longer shows the node's topics.
+      - name: Service discovery
+        description: |
+          With another node running, use `ros2 service list` to ensure that the expected services are listed. Then stop the node and ensure that the list operation no longer shows the node's services.
+      - name: Parameter discovery
+        description: |
+          With another node running, use `ros2 param list` to ensure that the expected parameters are listed. Then stop the node and ensure that the list operation no longer shows the node's parameters.
+  - name: Rviz
+    description: |
+      This is a sanity check to ensure that the GUI tools aren't fundamentally broken.
+    labels:
+      - rviz
+      - visualization
+      - core
+    links:
+      - name: Repo URL
+        url: https://github.com/ros2/rviz
+    checks:
+      - name: Check Rviz
+        description: |
+          Launch using the `rviz2` command.
+
+          The rviz window should be generally usable and should be able to load some of the discovered visualizations.
+
+          Loading visualizations into the tree and using the mouse to navigate through the virtual workspace is sufficient for this test.
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: rviz2
+            terminal: 2
+          - note: In RViz, in the left pane, click 'Add'. A window will pop up. In that window, under 'rviz_default_plugins', select 'TF' and click 'OK'. Under 'Displays', in the 'Global Options' section, change the 'Fixed Frame' to '/world'.
+          - note: In RViz, in the left pane, click 'Add'. A window will pop up. In that window, under 'rviz_default_plugins', select 'LaserScan' and click 'OK'. Under 'Displays', in the 'LaserScan' section, change the 'Topic' to '/scan'.
+        expect:
+          - note: You should see the dummy robot's kinematic tree waving back and forth in the rviz window.
+          - note: You should see a laser scan emitting from the waving end of the dummy robot.
+          - note: Play around, move the camera, enable and disable things in the 'Displays' pane. RViz should be stable.
+  - name: RQT
+    description: |
+      This is a sanity check to ensure that the GUI tools aren't fundamentally broken.
+    labels:
+      - rqt
+      - visualization
+      - core
+    links:
+      - name: Repo URL
+        url: https://github.com/ros-visualization/rqt
+    checks:
+      - name: Check RQT
+        description: |
+          Launch using the `rqt` command.
+
+          The rqt window should be generally usable and should be able to populate some of the discovered plugins.
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: rqt
+            terminal: 2
+          - note: In the RQT window, select 'Plugins > Visualization > Plot' in the dropdown menu. In the window that opens, set the Topic to `/joint_states/position[0]`. You should see a Sine wave.
+          - note: With 'Plugins > Introspection > Node Graph' you should see a network of the nodes and topics that are being published and subscribed by the dummy robot.
+          - note: With 'Plugins > Logging > Bag' you should be able record a ROS Bag file.
+          - note: With 'Plugins > Topic > Topic Monitor' you should be able to check the `/joint_states` topic and view messages streaming in.
+        expect:
+          - note: Rqt runs smoothly and the plugins work as expected.
+  - name: Installation instructions
+    labels:
+      - installation
+      - core
+    description: |
+      Follow the official installation instructions for the platform. If instructions have not been published for the platform, use the instructions for Rolling Ridley.
+
+      For source build platforms, this includes the installation of dependencies and building the packages.
+    links:
+      - name: Installation instructions
+        url: https://docs.ros.org/en/rolling/Installation.html
+    checks:
+      - name: Install works
+  - name: Local workspace overlay
+    labels:
+      - overlays
+      - core
+    description: |
+      Build a package in a local workspace which depends on packages supplied for the platform.
+
+      Run the tests for the package - all of them should pass.
+
+      For source platforms, this means building the candidate package in a separate workspace from the one used in the installation instructions.
+
+      TODO: Create a "dummy" package that ensures that we can target other packages using CMake, link against them, and run executables (tests) that are linked against libraries in the main workspace.
+    checks:
+      - name: Local workspace overlay works
