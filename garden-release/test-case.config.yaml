@@ -1,4 +1,9 @@
 generation: 1
+translation_map:
+  jammy: "Ubuntu Jammy"
+  installType: "Install type"
+  fastdds: "FastDDS"
+  dds: "DDS vendor"
 sets:
   # Makes everything but install files and READMEs
   - filters:
