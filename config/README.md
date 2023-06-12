@@ -1,8 +1,7 @@
-Configuration files and requirements for use with [yatm](https://github.com/audrow/yatm).
+Configuration files and requirements for use with [yatm](https://github.com/audrow/yatm).Follow instructions [here](https://github.com/audrow/yatm#how-to-use-this-repository) to create and upload test cases. Before running any commands, a number of environment variables need to be set. These are documented below for each release.
 
-## Usage
+## Humble
 
-Export necessary environment variables for `yatm`.
 ```bash
 cd ~/
 git clone https://github.com:osrf/ros2_test_cases
@@ -13,4 +12,3 @@ export GITHUB_REPO_NAME=ros2_test_cases
 export GITHUB_TOKEN=<your-github-token>
 ```
 
-Follow instruction [here](https://github.com/audrow/yatm#how-to-use-this-repository) to create and upload test cases.
