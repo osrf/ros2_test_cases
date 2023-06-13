@@ -12,8 +12,8 @@ Configuration files and requirements for use with [yatm](https://github.com/audr
 ### Humble
 
 ```bash
-export YATM_TEST_CASE_CONFIG_PATH=$HOME/ros2_test_cases/humble/test-case.config.yaml
-export YATM_REQUIREMENTS_DIRECTORY_PATH=$HOME/ros2_test_cases/humble/requirements
+export YATM_TEST_CASE_CONFIG_PATH=$HOME/ros2_test_cases/config/humble/test-case.config.yaml
+export YATM_REQUIREMENTS_DIRECTORY_PATH=$HOME/ros2_test_cases/config/humble/requirements
 export YATM_DISTO_LABEL=humble
 export GITHUB_REPO_OWNER=osrf
 export GITHUB_REPO_NAME=ros2_test_cases
@@ -23,8 +23,8 @@ export GITHUB_TOKEN=<your-github-token>
 ### Iron
 
 ```bash
-export YATM_TEST_CASE_CONFIG_PATH=$HOME/ros2_test_cases/iron/test-case.config.yaml
-export YATM_REQUIREMENTS_DIRECTORY_PATH=$HOME/ros2_test_cases/iron/requirements
+export YATM_TEST_CASE_CONFIG_PATH=$HOME/ros2_test_cases/config/iron/test-case.config.yaml
+export YATM_REQUIREMENTS_DIRECTORY_PATH=$HOME/ros2_test_cases/config/iron/requirements
 export YATM_DISTO_LABEL=iron
 export GITHUB_REPO_OWNER=osrf
 export GITHUB_REPO_NAME=ros2_test_cases
