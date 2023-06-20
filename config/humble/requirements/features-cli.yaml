@@ -1,0 +1,826 @@
+requirements:
+  - name: Check action Cli
+    labels:
+      - ros2cli
+      - feature
+      - ros2action
+    checks:
+      - name: Check info
+        try:
+          - stdin: ros2 run examples_rclcpp_minimal_action_server action_server_member_functions
+            terminal: 1
+          - stdin: ros2 action info /fibonacci
+            terminal: 2
+        expect:
+          - stdout: |
+              Action: /fibonacci
+              Action clients: 0
+              Action servers: 1
+                /minimal_action_server
+            terminal: 2
+      - name: Check list
+        try:
+          - stdin: ros2 run examples_rclcpp_minimal_action_server action_server_member_functions
+            terminal: 1
+          - stdin: ros2 action list
+            terminal: 2
+        expect:
+          - stdout: /fibonacci
+            terminal: 2
+      - name: Check send_goal
+        try:
+          - stdin: ros2 run examples_rclcpp_minimal_action_server action_server_member_functions
+            terminal: 1
+          - stdin: ros2 action send_goal /fibonacci example_interfaces/action/Fibonacci order:\ 2\
+            terminal: 2
+        expect:
+          - stdout: |
+              Waiting for an action server to become available...
+              Sending goal:
+                  order: 2
+
+              Goal accepted with ID: 0110dbd59e804374bff8e4900c3201e8
+
+              Result:
+                  sequence:
+              - 0
+              - 1
+              - 1
+
+              Goal finished with status: SUCCEEDED
+            terminal: 2
+
+  - name: Check ROS 2 bag CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2bag
+    checks:
+      - name: Check record
+        try:
+          - stdin: ros2 run demo_nodes_cpp talker
+            terminal: 1
+            note: You should stop the talker once the recording is stopped.
+          - stdin: ros2 bag record /chatter -o my-bag
+            note: Run for a few seconds and then hit Ctrl-C to stop the bag recording.
+            terminal: 2
+        expect:
+          - note: You should see a folder named my-bag in the current directory
+      - name: Check info
+        try:
+          - note: Continuing from the previous check.
+          - stdin: ros2 bag info my-bag
+        expect:
+          - note: Something like the following
+            stdout: |
+              Files:             my-bag_0.db3
+              Bag size:          16.9 KiB
+              Storage id:        sqlite3
+              Duration:          3.0s
+              Start:             Apr  4 2022 18:00:05.863 (1649120405.863)
+              End:               Apr  4 2022 18:00:08.863 (1649120408.863)
+              Messages:          4
+              Topic information: Topic: /chatter | Type: std_msgs/msg/String | Count: 4 | Serialization Format: cdr
+      - name: Check play
+        try:
+          - note: Continuing from the previous two checks. Make sure that the talker is stopped.
+          - stdin: ros2 bag play -l my-bag
+            note: The `-l` option loops the bag. You should kill this process eventually with Ctrl-C.
+            terminal: 1
+          - stdin: ros2 topic echo /chatter
+            terminal: 2
+        expect:
+          - stdout: |
+              ---
+              data: 'Hello World: 77'
+              ---
+              data: 'Hello World: 78'
+              ---
+              data: 'Hello World: 75'
+              ---
+              data: 'Hello World: 76'
+              ---
+              data: 'Hello World: 77'
+              ---
+            note: Something like the following.
+            terminal: 2
+
+  # TODO add details to this requirement
+  - name: Check ROS 2 component CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2component
+    checks:
+      - name: Check info
+        try:
+          - stdin: ros2 component info
+      - name: Check list
+        try:
+          - stdin: ros2 component list
+      - name: Check load
+        try:
+          - stdin: ros2 component load
+      - name: Check standalone
+        try:
+          - stdin: ros2 component standalone
+      - name: Check types
+        try:
+          - stdin: ros2 component types
+      - name: Check unload
+        try:
+          - stdin: ros2 component unload
+
+  - name: Check ROS 2 daemon CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2daemon
+    checks:
+      - name: Check status
+        try:
+          - stdin: ros2 daemon status
+        expect:
+          - stdout: The daemon is running
+      - name: Stop the daemon
+        try:
+          - stdin: ros2 daemon stop
+        expect:
+          - stdout: The daemon has been stopped
+      - name: Check that the daemon is not running
+        try:
+          - stdin: ros2 daemon status
+        expect:
+          - stdout: The daemon is not running
+      - name: Restart the daemon
+        try:
+          - stdin: ros2 daemon start
+        expect:
+          - stdout: The daemon has been started
+      - name: Check restart
+        try:
+          - stdin: ros2 daemon status
+        expect:
+          - stdout: The daemon is running
+
+  - name: Check ROS 2 doctor CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2doctor
+    checks:
+      - name: Check `-r`
+        try:
+          - stdin: ros2 doctor -r
+        expect:
+          - note: A large report is generated with several sections.
+      - name: Check `-rf`
+        try:
+          - stdin: ros2 doctor -rf
+        expect:
+          - note: A lot of checks and a summary of the checks is given (e.g., 'All 5 checks passed').
+      - name: Check `-iw`
+        try:
+          - stdin: ros2 doctor -iw
+        expect:
+          - note: A lot of checks and a summary of the checks is given (e.g., '2/5 checks passed').
+      - name: Check hello
+        try:
+          - stdin: ros2 doctor hello
+        expect:
+          - note: You'll see repeated messages that look somewhat like the following.
+            stdout: |
+              MULTIMACHINE COMMUNICATION SUMMARY
+              Topic: /canyouhearme, Published Msg Count: 11
+              Subscribed from:
+                              Hostname             Msg Count /1.0s
+              Multicast Group/Port: 225.0.0.1/49150, Sent Msg Count: 11
+              Received from:
+                              Hostname             Msg Count /1.0s
+              ------------------------------------------------------------
+
+  - name: Check ROS 2 wtf CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2wtf
+    description: '`ros2 wtf` is an alias for `ros2 doctor`.'
+    checks:
+      - name: Check `-r`
+        try:
+          - stdin: ros2 wtf -r
+        expect:
+          - note: A large report is generated with several sections.
+      - name: Check `-rf`
+        try:
+          - stdin: ros2 wtf -rf
+        expect:
+          - note: A lot of checks and a summary of the checks is given (e.g., 'All 5 checks passed').
+      - name: Check `-iw`
+        try:
+          - stdin: ros2 wtf -iw
+        expect:
+          - note: A lot of checks and a summary of the checks is given (e.g., '2/5 checks passed').
+      - name: Check hello
+        try:
+          - stdin: ros2 wtf hello
+        expect:
+          - note: You'll see repeated messages that look somewhat like the following.
+            stdout: |
+              MULTIMACHINE COMMUNICATION SUMMARY
+              Topic: /canyouhearme, Published Msg Count: 11
+              Subscribed from:
+                              Hostname             Msg Count /1.0s
+              Multicast Group/Port: 225.0.0.1/49150, Sent Msg Count: 11
+              Received from:
+                              Hostname             Msg Count /1.0s
+              ------------------------------------------------------------
+
+  - name: Check ROS 2 interface CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2interface
+    checks:
+      - name: Check list
+        try:
+          - stdin: ros2 interface list
+        expect:
+          - note: A large list of all messages, services, and actions is given.
+      - name: Check package
+        try:
+          - stdin: ros2 interface package turtlesim
+        expect:
+          - stdout: |
+              turtlesim/srv/TeleportRelative
+              turtlesim/srv/Kill
+              turtlesim/msg/Pose
+              turtlesim/srv/TeleportAbsolute
+              turtlesim/srv/SetPen
+              turtlesim/action/RotateAbsolute
+              turtlesim/srv/Spawn
+              turtlesim/msg/Color
+      - name: Check packages
+        try:
+          - stdin: ros2 interface packages
+        expect:
+          - note: A list of all of the packages that define messages, services, or actions is given. An example is as follows.
+          - stdout: |
+              action_msgs
+              action_tutorials_interfaces
+              actionlib_msgs
+              builtin_interfaces
+              ...
+              turtlesim
+              unique_identifier_msgs
+              visualization_msgs
+      - name: Check proto
+        try:
+          - stdin: ros2 interface proto std_msgs/msg/Header
+        expect:
+          - stdout: |
+              "stamp:
+                sec: 0
+                nanosec: 0
+              frame_id: ''
+              "
+      - name: Check show
+        try:
+          - stdin: ros2 interface show std_msgs/msg/Header
+        expect:
+          - stdout: |
+              # Standard metadata for higher-level stamped data types.
+              # This is generally used to communicate timestamped data
+              # in a particular coordinate frame.
+
+              # Two-integer timestamp that is expressed as seconds and nanoseconds.
+              builtin_interfaces/Time stamp
+                int32 sec
+                uint32 nanosec
+
+              # Transform frame with which this data is associated.
+              string frame_id
+
+  - name: Check ROS 2 launch CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2launch
+    checks:
+      - name: Check launch package
+        try:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+        expect:
+          - note: You should see something like the following
+            stdout: |
+              [INFO] [launch]: All log files can be found below /home/parallels/.ros/log/2022-03-21-17-38-54-737866-parallels-Parallels-Virtual-Platform-3717
+              [INFO] [launch]: Default logging verbosity is set to INFO
+              [INFO] [talker-1]: process started with pid [3722]
+              [INFO] [listener-2]: process started with pid [3724]
+              [talker-1] [INFO] [1647909535.937731548] [talker]: Publishing: 'Hello World: 1'
+              [listener-2] [INFO] [1647909535.938337387] [listener]: I heard: [Hello World: 1]
+              [talker-1] [INFO] [1647909536.937932068] [talker]: Publishing: 'Hello World: 2'
+              [listener-2] [INFO] [1647909536.938125486] [listener]: I heard: [Hello World: 2]
+              [talker-1] [INFO] [1647909537.936162331] [talker]: Publishing: 'Hello World: 3'
+              [listener-2] [INFO] [1647909537.936366391] [listener]: I heard: [Hello World: 3]
+              ...
+
+      - name: Check launch launch file directly
+        try:
+          - stdin: curl https://raw.githubusercontent.com/ros2/demos/master/demo_nodes_cpp/launch/topics/talker_listener.launch.py > /tmp/talker_listener.launch.py
+            note: Download a launch file, for example with `curl`.
+          - stdin: ros2 launch /tmp/talker_listener.launch.py
+        expect:
+          - note: You should see something like the following
+            stdout: |
+              [INFO] [launch]: All log files can be found below /home/parallels/.ros/log/2022-03-21-17-38-54-737866-parallels-Parallels-Virtual-Platform-3717
+              [INFO] [launch]: Default logging verbosity is set to INFO
+              [INFO] [talker-1]: process started with pid [3722]
+              [INFO] [listener-2]: process started with pid [3724]
+              [talker-1] [INFO] [1647909535.937731548] [talker]: Publishing: 'Hello World: 1'
+              [listener-2] [INFO] [1647909535.938337387] [listener]: I heard: [Hello World: 1]
+              [talker-1] [INFO] [1647909536.937932068] [talker]: Publishing: 'Hello World: 2'
+              [listener-2] [INFO] [1647909536.938125486] [listener]: I heard: [Hello World: 2]
+              [talker-1] [INFO] [1647909537.936162331] [talker]: Publishing: 'Hello World: 3'
+              [listener-2] [INFO] [1647909537.936366391] [listener]: I heard: [Hello World: 3]
+              ...
+
+  - name: Check ROS 2 Multicast CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2multicast
+    checks:
+      - name: Check receive
+        try:
+          - stdin: ros2 multicast receive
+            terminal: 1
+          - stdin: ros2 multicast send
+            terminal: 2
+      - name: Check send
+        try:
+          - stdout: |
+              Waiting for UDP multicast datagram...
+              Received from 10.211.55.9:59527: 'Hello World!'
+            terminal: 1
+          - stdout: |
+              Sending one UDP multicast datagram...
+            terminal: 2
+
+  - name: Check ROS 2 Node CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2node
+    checks:
+      - name: Check info
+        try:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+            note: Launch a node
+            terminal: 1
+          - stdin: ros2 node info /talker
+            terminal: 2
+            note: Get the info for the `talker` that was launched.
+        expect:
+          - terminal: 2
+            note: You should see something similar to the following
+            stdout: |
+              Subscribers:
+                /parameter_events: rcl_interfaces/msg/ParameterEvent
+              Publishers:
+                /chatter: std_msgs/msg/String
+                /parameter_events: rcl_interfaces/msg/ParameterEvent
+                /rosout: rcl_interfaces/msg/Log
+              Service Servers:
+                /talker/describe_parameters: rcl_interfaces/srv/DescribeParameters
+                /talker/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
+                /talker/get_parameters: rcl_interfaces/srv/GetParameters
+                /talker/list_parameters: rcl_interfaces/srv/ListParameters
+                /talker/set_parameters: rcl_interfaces/srv/SetParameters
+                /talker/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
+              Service Clients:
+
+              Action Servers:
+
+              Action Clients:
+      - name: Check list
+        try:
+          - stdin: ros2 launch demo_nodes_cpp talker_listener.launch.py
+            note: Launch a node
+            terminal: 1
+          - stdin: ros2 node list
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: |
+              /listener
+              /talker
+
+  - name: Check ROS 2 Param CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2param
+    checks:
+      - name: Check delete
+        try:
+          - stdin: ros2 param delete
+      - name: Check describe
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param describe /turtlesim background_b
+            terminal: 2
+        expect:
+          - stdout: |
+              Parameter name: background_b
+              Type: integer
+              Description: Blue channel of the background color
+              Constraints:
+                Min value: 0
+                Max value: 255
+                Step: 1
+            terminal: 2
+      - name: Check dump
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param dump /turtlesim
+            terminal: 2
+        expect:
+          - note: Something like the following.
+            terminal: 2
+            stdout: |
+              /turtlesim:
+                ros__parameters:
+                  background_b: 255
+                  background_g: 86
+                  background_r: 69
+                  qos_overrides:
+                    /parameter_events:
+                      publisher:
+                        depth: 1000
+                        durability: volatile
+                        history: keep_last
+                        reliability: reliable
+                  use_sim_time: false
+      - name: Check get
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param get /turtlesim background_b
+            terminal: 2
+        expect:
+          - stdout: |
+              Integer value is: 255
+            terminal: 2
+            note: Something like the following.
+      - name: Check list
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param list /turtlesim
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: |
+              ros2 param list /turtlesim
+              background_b
+              background_g
+              background_r
+              qos_overrides./parameter_events.publisher.depth
+              qos_overrides./parameter_events.publisher.durability
+              qos_overrides./parameter_events.publisher.history
+              qos_overrides./parameter_events.publisher.reliability
+              use_sim_time
+      - name: Check set
+        try:
+          - stdin: ros2 run turtlesim turtlesim_node
+            terminal: 1
+          - stdin: ros2 param set /turtlesim background_b 0
+            terminal: 2
+        expect:
+          - note: The background in the turtlesim window should have become green
+            stdout: Set parameter successful
+            terminal: 2
+
+  - name: Check ROS 2 Pkg CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2pkg
+    checks:
+      - name: Check create
+        try:
+          - stdin: ros2 pkg create my-pkg
+        expect:
+          - note: Creates a folder named `my-pkg`, which has a `package.xml` file, `CMakeLists.txt` file, `src` folder, and `include` folder.
+      - name: Check executables
+        try:
+          - stdin: ros2 pkg executables turtlesim
+        expect:
+          - stdout: |
+              turtlesim draw_square
+              turtlesim mimic
+              turtlesim turtle_teleop_key
+              turtlesim turtlesim_node
+      - name: Check list
+        try:
+          - stdin: ros2 pkg list
+        expect:
+          - note: Lists all the packages, for example.
+            stdout: |
+              action_msgs
+              action_tutorials_cpp
+              action_tutorials_interfaces
+              ...
+              visualization_msgs
+              yaml_cpp_vendor
+              zstd_vendor
+      - name: Check prefix
+        try:
+          - stdin: ros2 pkg prefix turtlesim
+        expect:
+          - note: This varies depending on your install type. For example, from binaries on Ubuntu, it will be `/opt/ros/humble`
+      - name: Check xml
+        try:
+          - stdin: ros2 pkg xml turtlesim
+        expect:
+          - note: The full `package.xml` of the `turtlesim` package is printed to stdout.
+
+  - name: Check ROS 2 run CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2run
+    checks:
+      - name: Check run
+        try:
+          - stdin: ros2 run demo_nodes_cpp talker
+            note: You'll have to kill this command with Ctrl-C.
+        expect:
+          - stdout: |
+              [INFO] [1649123362.906256690] [talker]: Publishing: 'Hello World: 1'
+              [INFO] [1649123363.906469087] [talker]: Publishing: 'Hello World: 2'
+              [INFO] [1649123364.905960807] [talker]: Publishing: 'Hello World: 3'
+              ...
+      - name: Check run with prefix
+        try:
+          - stdin: ros2 run --prefix 'gdb -ex run' demo_nodes_cpp talker
+        expect:
+          - note: This runs the talker node in gdb. Once the talker is running, you can hit Ctrl-C to get to the console and then type `q` to quit gdb.
+
+  - name: Check ROS 2 security CLI on Linux
+    labels:
+      - ros2cli
+      - feature
+      - ros2security
+      - linux
+    links:
+      - name: Tutorial URL
+        url: https://github.com/ros2/sros2/blob/master/SROS2_Linux.md
+    checks:
+      - name: The Linux tutorials work
+
+  - name: Check ROS 2 security CLI on Windows
+    labels:
+      - ros2cli
+      - feature
+      - ros2security
+      - windows
+    links:
+      - name: Tutorial URL
+        url: https://github.com/ros2/sros2/blob/master/SROS2_Windows.md
+    checks:
+      - name: The Linux tutorials work
+
+  - name: Check ROS 2 service CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2service
+    checks:
+      - name: Check call
+        try:
+          - stdin: ros2 run demo_nodes_cpp add_two_ints_server
+            terminal: 1
+          - stdin: |
+              ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 1, b: 2}"
+            terminal: 2
+        expect:
+          - stdout: |
+              [INFO] [1649123971.736926946] [add_two_ints_server]: Incoming request
+              a: 1 b: 2
+            terminal: 1
+          - stdout: |
+              requester: making request: example_interfaces.srv.AddTwoInts_Request(a=1, b=2)
+
+              response:
+              example_interfaces.srv.AddTwoInts_Response(sum=3)
+            terminal: 2
+
+      - name: Check find
+        try:
+          - stdin: ros2 run demo_nodes_cpp add_two_ints_server
+            terminal: 1
+          - stdin: ros2 service find
+            terminal: 2
+        expect:
+          - stdout: /add_two_ints
+            terminal: 2
+          - note: Trying to find another service message that is not being used will return no text to stdout; for example `ros2 service find example_interfaces/srv/SetBool` returns nothing.
+      - name: Check list
+        try:
+          - stdin: ros2 run demo_nodes_cpp add_two_ints_server
+            terminal: 1
+          - stdin: ros2 service list
+            terminal: 2
+        expect:
+          - stdout: |
+              /add_two_ints
+              /add_two_ints_server/describe_parameters
+              /add_two_ints_server/get_parameter_types
+              /add_two_ints_server/get_parameters
+              /add_two_ints_server/list_parameters
+              /add_two_ints_server/set_parameters
+              /add_two_ints_server/set_parameters_atomically
+            terminal: 2
+      - name: Check type
+        try:
+          - stdin: ros2 run demo_nodes_cpp add_two_ints_server
+            terminal: 1
+          - stdin: ros2 service type /add_two_ints
+            terminal: 2
+        expect:
+          - stdout: example_interfaces/srv/AddTwoInts
+            terminal: 2
+
+  # TODO this doesn't seem to exist at least on a binary build
+  # - name: Check ROS 2 test CLI
+  #   labels:
+  #     - ros2cli
+  #     - feature
+  #     - ros2test
+  #   checks:
+  #     - name: Check
+  #       try:
+  #         - stdin: ros2 test <package> <test launch file>
+
+  - name: Check ROS 2 topic CLI
+    labels:
+      - ros2cli
+      - feature
+      - ros2topic
+    checks:
+      - name: Check bw
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic bw /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            note: Something like the following.
+            stdout: |
+              Subscribed to [/joint_states]
+              5.04 KB/s from 50 messages
+                Message size mean: 0.10 KB min: 0.10 KB max: 0.10 KB
+              5.02 KB/s from 100 messages
+                Message size mean: 0.10 KB min: 0.10 KB max: 0.10 KB
+              ...
+      - name: Check delay
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic delay /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            note: Something like the following.
+            stdout: |
+              average delay: 0.001
+                min: 0.000s max: 0.001s std dev: 0.00012s window: 47
+              average delay: 0.001
+                min: 0.000s max: 0.002s std dev: 0.00021s window: 97
+              ...
+      - name: Check echo
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic echo /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            note: Something like the following.
+            stdout: |
+              ---
+              header:
+                stamp:
+                  sec: 1649125169
+                  nanosec: 961952254
+                frame_id: ''
+              name:
+              - single_rrbot_joint1
+              - single_rrbot_joint2
+              position:
+              - -0.9985924716759744
+              - -0.9985924716759744
+              velocity: []
+              effort: []
+              ---
+              ...
+      - name: Check find
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic find sensor_msgs/msg/JointState
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: /joint_states
+      - name: Check hz
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic hz /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            note: Something like the following.
+            stdout: |
+              average rate: 50.252
+                min: 0.000s max: 0.043s std dev: 0.00451s window: 52
+              average rate: 50.125
+                min: 0.000s max: 0.043s std dev: 0.00492s window: 102
+              ...
+      - name: Check info
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic info /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: |
+              Type: sensor_msgs/msg/JointState
+              Publisher count: 1
+              Subscription count: 1
+      - name: Check list
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic list
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: |
+              /joint_states
+              /map
+              /parameter_events
+              /robot_description
+              /rosout
+              /scan
+              /tf
+              /tf_static
+      - name: Check type
+        try:
+          - stdin: ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py
+            terminal: 1
+          - stdin: ros2 topic type /joint_states
+            terminal: 2
+        expect:
+          - terminal: 2
+            stdout: sensor_msgs/msg/JointState
+      - name: Check pub
+        try:
+          - stdin: ros2 run demo_nodes_cpp listener
+            terminal: 1
+          - stdin: |
+              ros2 topic pub /chatter std_msgs/msg/String "{data: 'hi'}"
+            terminal: 2
+        expect:
+          - terminal: 1
+            note: Something like the following.
+            stdout: |
+              [INFO] [1649125551.479505602] [listener]: I heard: [hi]
+              [INFO] [1649125552.480104544] [listener]: I heard: [hi]
+              ...
+          - terminal: 2
+            note: Something like the following.
+            stdout: |
+              publisher: beginning loop
+              publishing #1: std_msgs.msg.String(data='hi')
+
+              publishing #2: std_msgs.msg.String(data='hi')
+              ...
+
+  # TODO this doesn't seem to exist at least on a binary build
+  # - name: Check ROS 2 trace CLI
+  #   labels:
+  #     - ros2cli
+  #     - feature
+  #     - ros2trace
+  #   checks:
+  #     - name: Check
+  #       try:
+  #         - stdin: ros2 trace

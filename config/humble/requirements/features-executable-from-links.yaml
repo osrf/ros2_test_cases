@@ -1,0 +1,138 @@
+requirements:
+  - name: Launch testing
+    labels:
+      - executable
+      - feature
+    links:
+      - name: Launch testing examples
+        url: https://github.com/ros2/launch/blob/master/launch_testing/README.md#examples
+    checks:
+      - name: Test `hello_world_launch_test.py`
+        try:
+          - stdin: launch_test test/launch_testing/examples/hello_world_launch_test.py
+      - name: Test `good_proc_launch_test.py`
+        try:
+          - stdin: launch_test test/launch_testing/examples/good_proc_launch_test.py
+      - name: Test `terminating_proc_launch_test.py`
+        try:
+          - stdin: launch_test test/launch_testing/examples/terminating_proc_launch_test.py
+      - name: Test `args_launch_test.py`
+        try:
+          - note: Show the arguments
+            stdin: launch_test test/launch_testing/examples/args_launch_test.py --show-args
+          - note: Run the test
+            stdin: launch_test test/launch_testing/examples/args_launch_test.py dut_arg:=hey
+      - name: Test `context_launch_test.py`
+        try:
+          - stdin: launch_test test/launch_testing/examples/context_launch_test.py
+  - name: Quality of Service Demos
+    labels:
+      - executable
+      - feature
+      - qos
+    links:
+      - name: Demo URL
+        url: https://github.com/ros2/demos/blob/master/quality_of_service_demo/README.md
+    checks:
+      - name: Deadline with pause
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp deadline 600 --publish-for 5000 --pause-for 2000
+          - stdin: ros2 run quality_of_service_demo_py deadline 600 --publish-for 5000 --pause-for 2000
+        expect:
+          - note: The publisher will publish for 5 seconds, then pause for 2 - deadline events will start firing on both participants, until the publisher comes back.
+      - name: Deadline no pause
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp deadline 600 --publish-for 5000 --pause-for 0
+          - stdin: ros2 run quality_of_service_demo_py deadline 600 --publish-for 5000 --pause-for 0
+        expect:
+          - note: The publisher doesn't actually pause, no deadline misses should occur.
+      - name: Lifespan, some survive
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp lifespan 1000 --publish-count 10 --subscribe-after 3000
+          - stdin: ros2 run quality_of_service_demo_py lifespan 1000 --publish-count 10 --subscribe-after 3000
+        expect:
+          - note: |
+              After a few seconds, you should see (approximately) messages 4-9 printed from the subscriber.
+
+              The first few messages, with 1 second lifespan, were gone by the time the subscriber joined after 3 seconds.
+      - name: Lifespan, all survive
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp lifespan 4000 --publish-count 10 --subscribe-after 3000
+          - stdin: ros2 run quality_of_service_demo_py lifespan 4000 --publish-count 10 --subscribe-after 3000
+        expect:
+          - note: |
+              After a few seconds, you should see all of the messages (0-9) printed from the subscriber.
+
+              All messages, with their 4 second lifespan, survived until the subscriber joined.
+      - name: Liveliness
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp liveliness 1000 --kill-publisher-after 2000
+          - stdin: ros2 run quality_of_service_demo_py liveliness 1000 --kill-publisher-after 2000
+        expect:
+          - note: After 2 seconds, the publisher will be killed, and the subscriber will receive a callback 1 second after that notifying it that the liveliness has changed.
+      - name: Incompatible QoS Offered/Requested
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp incompatible_qos durability
+          - stdin: ros2 run quality_of_service_demo_py incompatible_qos durability
+        expect:
+          - note: |
+              The publisher in this demo will publish 5 messages, but also output a notification stating that its offered QoS is incompatible with the subscriber that is also created by this demo. The subscriber in this demo will similarly output a notification stating that its requested QoS is incompatible with the QoS offered by the publisher.
+      - name: Interactive Quality of Service Demo
+        try:
+          - stdin: ros2 run quality_of_service_demo_cpp interactive_publisher
+            terminal: 1
+          - stdin: ros2 run quality_of_service_demo_cpp interactive_subscriber
+            terminal: 2
+          - note: In the publisher's terminal, press `p` to manually assert the liveliness of the publisher, for when Liveliness kind is `MANUAL_BY_TOPIC`.
+          - note: In the publisher's terminal, press `s` to toggle enabling/disabling of publishing messages
+          - note: In the publisher and subscriber's terminal, press `q` to print the current QoS policy.
+          - note: In the publisher and subscriptions's terminal, press `x` to stop and exit the demo.
+        expect:
+          - note: All key-press commands work.
+  - name: Lifecycle demo
+    labels:
+      - executable
+      - feature
+      - lifecycle
+    links:
+      - name: Reference URL
+        url: https://github.com/ros2/demos/blob/master/lifecycle/README.rst
+    checks:
+      - name: Run files individually
+        try:
+          - stdin: ros2 run lifecycle lifecycle_talker
+            terminal: 1
+            imageUrl: https://camo.githubusercontent.com/6af40d87a90146d4ef95dadbaf346b7aafab0fd885ea6c5c42cfa33e4230ba4c/68747470733a2f2f61736369696e656d612e6f72672f612f3234393034392e706e67
+          - stdin: ros2 run lifecycle lifecycle_listener
+            terminal: 2
+            imageUrl: https://camo.githubusercontent.com/e39630aeaf1a23341e89846256563cb02d42d50741ccfea51613cf660633998b/68747470733a2f2f61736369696e656d612e6f72672f612f3234393035302e706e67
+          - stdin: ros2 run lifecycle lifecycle_service_client
+            terminal: 3
+            imageUrl: https://camo.githubusercontent.com/e4e31422fa38b07a492b13be87cd629485b688060d7440ae5cd8386624598e8e/68747470733a2f2f61736369696e656d612e6f72672f612f3234393035312e706e67
+        expect:
+          - note: The images match.
+  - name: Topic monitor
+    labels:
+      - executable
+      - feature
+      - topic_monitor
+    links:
+      - name: Reference URL
+        url: https://github.com/ros2/demos/blob/master/topic_monitor/README.md
+    checks:
+      - name: Comparing reliability QoS settings
+        try:
+          - note: |
+              You will need two machines with ROS 2: one mobile and one stationary.
+          - stdin: ros2 run topic_monitor topic_monitor --display
+          - stdin: ros2 launch topic_monitor reliability_demo.launch.py
+            note: |
+              Run the `ros2 launch topic_monitor reliability_demo.launch.py` executable on the stationary machine. This will start two nodes: one publishing in “reliable” mode, and one in “best effort”.
+          - stdin: ros2 run topic_monitor topic_monitor --display --allowed-latency 5
+            note: |
+              Start the monitor on a mobile machine such as a laptop. Use `ros2 run topic_monitor topic_monitor --display --allowed-latency 5` to account for any latency that may occur re-sending the reliable messages.
+          - note: Take the mobile machine out of range of the monitor, and observe how the reception rates differ for the different topics.
+        expect:
+          - note: |
+              You should see that the "reliable" topic has a reception rate that is almost always either 0 or 100%, while the "best effort" topic has a reception rate that fluctuates based on the strength of the connection.
+            imageUrl: https://github.com/ros2/demos/raw/master/topic_monitor/doc/reliability_comparison.png
