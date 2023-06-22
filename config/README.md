@@ -30,3 +30,14 @@ export GITHUB_REPO_OWNER=osrf
 export GITHUB_REPO_NAME=ros2_test_cases
 export GITHUB_TOKEN=<your-github-token>
 ```
+
+### Jazzy
+
+```bash
+export YATM_TEST_CASE_CONFIG_PATH=$HOME/ros2_test_cases/config/jazzy/test-case.config.yaml
+export YATM_REQUIREMENTS_DIRECTORY_PATH=$HOME/ros2_test_cases/config/jazzy/requirements
+export YATM_DISTO_LABEL=jazzy
+export GITHUB_REPO_OWNER=osrf
+export GITHUB_REPO_NAME=ros2_test_cases
+export GITHUB_TOKEN=<your-github-token>
+```

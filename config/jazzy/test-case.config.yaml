@@ -1,0 +1,139 @@
+generation: 1
+sets:
+  # Documentation
+  # This is only being run on one combination since this is testing the documentation
+  # and the functionality seen in the documentation will be tested on several other
+  # platforms, chip sets, and operating systems in the core and feature test cases
+  - filters:
+      - isMatch: true
+        labels:
+          - docs
+      - isMatch: false
+        labels:
+          - launch-files
+      - isMatch: false
+        name: Launch system
+        labels:
+          - launch
+      - isMatch: false
+        name: Webots
+        labels:
+          - webots
+      - isMatch: false
+        name: Deploying ROS 2 on IBM Cloud
+      - isMatch: false
+        name: Security on Two
+      - isMatch: false
+        name: Eclipse Oxygen with ROS 2 and rviz2
+      - isMatch: false
+        name: Building Realtime rt_preempt kernel for ROS 2
+      - isMatch: false
+        name: Releasing a ROS 2 package with bloom
+      - isMatch: false
+        name: Rosbag with ROS1 Bridge
+      # Ignore links which are redirects.
+      - isMatch: false
+        name: Ignition
+        labels:
+          - ignition
+      - isMatch: false
+        name: Recording A Bag From Your Own Node Python
+    dimensions:
+      dds:
+        - fastdds
+      buildType:
+        - debian
+      os:
+        - jammy
+      chip:
+        - amd64
+
+  # Features
+  # Jammy
+  - filters:
+      - isMatch: true
+        labels:
+          - feature
+      - isMatch: false
+        labels:
+          - windows
+    dimensions:
+      dds:
+        - fastdds
+        - cyclone
+      buildType:
+        - debian
+      os:
+        - jammy
+      chip:
+        - amd64
+  # Windows
+  - filters:
+      - isMatch: true
+        labels:
+          - feature
+      - isMatch: false
+        labels:
+          - linux
+    dimensions:
+      dds:
+        - fastdds
+        - cyclone
+      buildType:
+        - binary
+      os:
+        - windows
+      chip:
+        - amd64
+
+  # Core
+  # Jammy
+  - filters:
+      - isMatch: true
+        labels:
+          - core
+    dimensions:
+      dds:
+        - fastdds
+        - cyclone
+        - connext
+      buildType:
+        - debian
+        - binary
+      chip:
+        - amd64
+        - arm64
+      os:
+        - jammy
+  # Windows (no arm64)
+  - filters:
+      - isMatch: true
+        labels:
+          - core
+    dimensions:
+      dds:
+        - fastdds
+        - cyclone
+        - connext
+      buildType:
+        - binary
+        - source
+      chip:
+        - amd64
+      os:
+        - windows
+
+  # Core for tear 3 platforms
+  - filters:
+      - isMatch: true
+        labels:
+          - core
+    dimensions:
+      dds:
+        - fastdds
+      buildType:
+        - source
+      chip:
+        - amd64
+      os:
+        - rhel 9
