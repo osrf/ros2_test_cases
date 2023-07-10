@@ -1,4 +1,9 @@
 generation: 1
+translation_map:
+  jammy: "Ubuntu Jammy"
+  installType: "Install type"
+  fastdds: "FastDDS"
+  dds: "DDS vendor"
 sets:
   # Documentation
   # This is only being run on one combination since this is testing the documentation
