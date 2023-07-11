@@ -1,0 +1,156 @@
+requirements:
+  - name: Service introspection cpp
+    labels:
+      - executable
+      - feature
+    links:
+      - name: demo_nodes_cpp
+        url: https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp
+    checks:
+      - name: Run the client and server
+        try:
+          - stdin: ros2 launch demo_nodes_cpp introspect_services_launch.py
+            terminal: 1
+          - stdin: ros2 topic list --include-hidden-topics
+            terminal: 2
+        expect:
+          - stdout: |
+              [introspection_service-1] a: 2 b: 3
+              [introspection_client-2] [INFO] [1680585324.964598437] [introspection_client]: Result of add_two_ints: 5
+            terminal: 1
+          - stdout: |
+              /parameter_events
+              /rosout
+            terminal: 2
+      - name: Configure service to send introspection metadata
+        try:
+          - stdin: ros2 launch demo_nodes_cpp introspect_services_launch.py
+            terminal: 1
+          - stdin: ros2 param set /introspection_service service_configure_introspection metadata
+            terminal: 2
+          - stdin: ros2 topic echo /add_two_ints/_service_event
+            terminal: 2
+        expect:
+          - stdout: |
+              [introspection_service-1] a: 2 b: 3
+              [introspection_client-2] [INFO] [1680585324.964598437] [introspection_client]: Result of add_two_ints: 5
+            terminal: 1
+          - stdout: |
+              info:
+                event_type: 1
+                stamp:
+                  sec: 1680586531
+                  nanosec: 726539263
+                client_gid:
+                - 83
+                - 143
+                - 248
+                - 38
+                - 47
+                - 231
+                - 185
+                - 230
+                - 98
+                - 17
+                - 45
+                - 187
+                - 128
+                - 124
+                - 253
+                - 156
+                sequence_number: 46
+              request: []
+              response: []
+              ---
+              info:
+                event_type: 2
+                stamp:
+                  sec: 1680586531
+                  nanosec: 726695003
+                client_gid:
+                - 83
+                - 143
+                - 248
+                - 38
+                - 47
+                - 231
+                - 185
+                - 230
+                - 98
+                - 17
+                - 45
+                - 187
+                - 128
+                - 124
+                - 253
+                - 156
+                sequence_number: 46
+              request: []
+              response: []
+            terminal: 2
+      - name: Configure client to send introspection metadata
+        try:
+          - stdin: ros2 launch demo_nodes_cpp introspect_services_launch.py
+            terminal: 1
+          - stdin: ros2 param set /introspection_client client_configure_introspection metadata
+            terminal: 2
+          - stdin: ros2 topic echo /add_two_ints/_service_event
+            terminal: 2
+        expect:
+          - stdout: |
+              [introspection_service-1] a: 2 b: 3
+              [introspection_client-2] [INFO] [1680585324.964598437] [introspection_client]: Result of add_two_ints: 5
+            terminal: 1
+          - stdout: |
+              info:
+                event_type: 0
+                stamp:
+                  sec: 1680586637
+                  nanosec: 158736272
+                client_gid:
+                - 1
+                - 16
+                - 34
+                - 142
+                - 114
+                - 128
+                - 207
+                - 116
+                - 98
+                - 246
+                - 204
+                - 52
+                - 0
+                - 0
+                - 0
+                - 7
+                sequence_number: 48
+              request: []
+              response: []
+              ---
+              info:
+                event_type: 3
+                stamp:
+                  sec: 1680586637
+                  nanosec: 159157853
+                client_gid:
+                - 1
+                - 16
+                - 34
+                - 142
+                - 114
+                - 128
+                - 207
+                - 116
+                - 98
+                - 246
+                - 204
+                - 52
+                - 0
+                - 0
+                - 0
+                - 7
+                sequence_number: 48
+              request: []
+              response: []
+            terminal: 2
