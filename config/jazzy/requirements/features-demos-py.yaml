@@ -60,7 +60,7 @@ requirements:
       - demos-py
     links:
       - name: Lifecycle Py
-        url: https://github.com/ros2/demos/tree/iron/lifecycle_py
+        url: https://github.com/ros2/demos/tree/jazzy/lifecycle_py
     checks:
       - name: Check `listener` and `talker`
         try:

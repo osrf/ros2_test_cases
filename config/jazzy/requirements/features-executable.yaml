@@ -362,11 +362,11 @@ requirements:
     checks:
       - name: >-
           Check `gazebo --verbose
-          /opt/ros/rolling/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world`
+          /opt/ros/jazzy/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world`
         try:
           - stdin: >-
               ros2 run gazebo_ros_pkgs gazebo --verbose
-              /opt/ros/rolling/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world
+              /opt/ros/jazzy/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world
   - name: Executables in `rqt`
     labels:
       - executable

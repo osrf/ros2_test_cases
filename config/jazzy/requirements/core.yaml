@@ -197,7 +197,7 @@ requirements:
       For source build platforms, this includes the installation of dependencies and building the packages.
     links:
       - name: Installation instructions
-        url: https://docs.ros.org/en/iron/Installation.html
+        url: https://docs.ros.org/en/jazzy/Installation.html
     checks:
       - name: Install works
   - name: Local workspace overlay

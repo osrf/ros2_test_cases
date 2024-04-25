@@ -5,7 +5,7 @@ requirements:
       - feature
     links:
       - name: Composition demos
-        url: https://github.com/ros2/demos/blob/iron/composition/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/composition/README.md
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Demo Nodes (C++) executables
@@ -14,7 +14,7 @@ requirements:
       - feature
     links:
       - name: Demo Nodes C++
-        url: https://github.com/ros2/demos/blob/iron/demo_nodes_cpp/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/demo_nodes_cpp/README.md
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Demo Nodes Native (C++) executables
@@ -23,7 +23,7 @@ requirements:
       - feature
     links:
       - name: Demo Nodes C++ native
-        url: https://github.com/ros2/demos/blob/iron/demo_nodes_cpp_native/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/demo_nodes_cpp_native/README.md
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Dummy Map Server executables
@@ -32,7 +32,7 @@ requirements:
       - feature
     links:
       - name: Dummy Map Server
-        url: https://github.com/ros2/demos/blob/iron/dummy_robot/dummy_map_server/README.md#run
+        url: https://github.com/ros2/demos/blob/jazzy/dummy_robot/dummy_map_server/README.md#run
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Dummy Sensors executables
@@ -41,7 +41,7 @@ requirements:
       - feature
     links:
       - name: Dummy Sensors
-        url: https://github.com/ros2/demos/blob/iron/dummy_robot/dummy_sensors/README.md#run
+        url: https://github.com/ros2/demos/blob/jazzy/dummy_robot/dummy_sensors/README.md#run
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Image Tools executables
@@ -50,7 +50,7 @@ requirements:
       - feature
     links:
       - name: Image Tools
-        url: https://github.com/ros2/demos/blob/iron/image_tools/README.md#run
+        url: https://github.com/ros2/demos/blob/jazzy/image_tools/README.md#run
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Intra-process executables
@@ -59,7 +59,7 @@ requirements:
       - feature
     links:
       - name: Intra-process demos
-        url: https://github.com/ros2/demos/blob/iron/intra_process_demo/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/intra_process_demo/README.md
     checks:
       - name: The executables in the README are present and work as expected.
   - name: Launch testing
@@ -68,7 +68,7 @@ requirements:
       - feature
     links:
       - name: Launch testing examples
-        url: https://github.com/ros2/launch/blob/iron/launch_testing/README.md#examples
+        url: https://github.com/ros2/launch/blob/jazzy/launch_testing/README.md#examples
     checks:
       - name: Clone the example repository
         try:
@@ -99,7 +99,7 @@ requirements:
       - qos
     links:
       - name: Demo URL
-        url: https://github.com/ros2/demos/blob/iron/quality_of_service_demo/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/quality_of_service_demo/README.md
     checks:
       - name: Deadline with pause
         try:
@@ -163,7 +163,7 @@ requirements:
       - lifecycle
     links:
       - name: Reference URL
-        url: https://github.com/ros2/demos/blob/iron/lifecycle/README.rst
+        url: https://github.com/ros2/demos/blob/jazzy/lifecycle/README.rst
     checks:
       - name: Run files individually
         try:
@@ -185,7 +185,7 @@ requirements:
       - topic_monitor
     links:
       - name: Reference URL
-        url: https://github.com/ros2/demos/blob/iron/topic_monitor/README.md
+        url: https://github.com/ros2/demos/blob/jazzy/topic_monitor/README.md
     checks:
       - name: Comparing reliability QoS settings
         try:
@@ -202,7 +202,7 @@ requirements:
         expect:
           - note: |
               You should see that the "reliable" topic has a reception rate that is almost always either 0 or 100%, while the "best effort" topic has a reception rate that fluctuates based on the strength of the connection.
-            imageUrl: https://raw.githubusercontent.com/ros2/demos/iron/topic_monitor/doc/reliability_comparison.png
+            imageUrl: https://raw.githubusercontent.com/ros2/demos/jazzy/topic_monitor/doc/reliability_comparison.png
   - name: ROS 1 bridge
     labels:
       - executable
