@@ -1,6 +1,6 @@
 generation: 1
 translation_map:
-  jammy: "Ubuntu Jammy"
+  noble: "Ubuntu Noble"
   installType: "Install type"
   fastdds: "FastDDS"
   dds: "DDS vendor"
@@ -49,12 +49,12 @@ sets:
       buildType:
         - debian
       os:
-        - jammy
+        - noble
       chip:
         - amd64
 
   # Features
-  # Jammy
+  # Noble
   - filters:
       - isMatch: true
         labels:
@@ -69,7 +69,7 @@ sets:
       buildType:
         - debian
       os:
-        - jammy
+        - noble
       chip:
         - amd64
   # Windows
@@ -92,7 +92,7 @@ sets:
         - amd64
 
   # Core
-  # Jammy
+  # Noble
   - filters:
       - isMatch: true
         labels:
@@ -109,7 +109,7 @@ sets:
         - amd64
         - arm64
       os:
-        - jammy
+        - noble
   # Windows (no arm64)
   - filters:
       - isMatch: true

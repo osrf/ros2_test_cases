@@ -5,7 +5,7 @@ requirements:
       - feature
     links:
       - name: demo_nodes_cpp
-        url: https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp
+        url: https://github.com/ros2/demos/tree/jazzy/demo_nodes_cpp
     checks:
       - name: Run the client and server
         try:
