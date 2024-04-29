@@ -354,19 +354,18 @@ requirements:
       - name: Check `rviz2`
         try:
           - stdin: ros2 run rviz2 rviz2
-  - name: Executables in `gazebo_ros_pkgs`
+  - name: Executables in gz vendor packages
+    description: You will need to install the `desktop-full` or `simulation` variants before running this test.
     labels:
       - executable
       - feature
       - linux
     checks:
       - name: >-
-          Check `gazebo --verbose
-          /opt/ros/jazzy/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world`
+          Check `gz sim -v4 shapes.sdf`
         try:
           - stdin: >-
-              ros2 run gazebo_ros_pkgs gazebo --verbose
-              /opt/ros/jazzy/share/gazebo_plugins/worlds/gazebo_ros_camera_distortion_barrel_demo.world
+              gz sim -v4 shapes.sdf
   - name: Executables in `rqt`
     labels:
       - executable
