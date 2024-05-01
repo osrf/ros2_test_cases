@@ -37,7 +37,6 @@ If one or more checks fail, please provide the error message in a codeblock comm
 The goal is to close all tickets after successful validation. But we would like to prioritize the following sets in order:
 
 > **Note**: If you have access to a `Windows` machine, please prioritize testing on `Windows`. The next priority is `RHEL-9` followed by `Ubuntu Noble`.
-
 - [ ] [Tutorials from docs.ros.org](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Adocs)
   - [ ] [Installation on various platforms](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Ainstallation+)
   - [ ] [Beginner CLI](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Abeginner-cli-tools+)
@@ -45,15 +44,14 @@ The goal is to close all tickets after successful validation. But we would like 
   - [ ] [Intermediate](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Aintermediate+)
   - [ ] [Advanced](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aopen+label%3Adocs+label%3Aadvanced+)
 - [ ] [Core functionality](https://github.com/osrf/ros2_test_cases/labels/core)
-  - [ ] [noble, debian](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Anoble+label%3Adebian)
-  - [ ] [noble, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Anoble+label%3Abinary+)
-  - [ ] [windows, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Awindows+label%3Abinary)
-  - [ ] [windows, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3Awindows+label%3Asource)
-  - [ ] [rhel, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22rhel+9%22+)
+  - [ ] [noble, debian](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22OS%3A+Ubuntu+Noble+24.04%22+label%3A%22Build+type%3A+Debian%22)
+  - [ ] [noble, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22OS%3A+Ubuntu+Noble+24.04%22+label%3A%22Build+type%3A+Binary%22+)
+  - [ ] [windows, binary](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22Build+type%3A+Binary%22+label%3A%22OS%3A+Windows%22+)
+  - [ ] [windows, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22Build+type%3A+Source%22+label%3A%22OS%3A+Windows%22+)
+  - [ ] [rhel, source](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Acore+label%3A%22Build+type%3A+Source%22+label%3A%22OS%3A+RHEL+9%22+)
 - [ ] [Features](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+)
-  - [ ] [noble](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3Anoble+)
-  - [ ] [windows](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3Awindows+)
-
+  - [ ] [noble](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3A%22OS%3A+Ubuntu+Noble+24.04%22++)
+  - [ ] [windows](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label%3Afeature+label%3A%22OS%3A+Windows%22+)
 
 ## What if I want to test something else?
 If you would like to test the functionality of any other package or extend the capabilities tested above, please open additional tickets while following the format described above.
