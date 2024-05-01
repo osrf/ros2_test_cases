@@ -1,6 +1,8 @@
 # ROS 2 Jazzy Tutorial Party
 Welcome! The purpose of this repository is to guide the testing of various functionalities of ROS 2 Jazzy Jalisco prior to official release.
 In other words, welcome to the Tutorial Party!
+The tutorial party will run between May 1, 2024 and May 15, 2024 (inclusive).
+Testing after that is welcome, but will not be included in the official statistics.
 
 ## Who can contribute?
 Everyone, all contributions are welcome!
