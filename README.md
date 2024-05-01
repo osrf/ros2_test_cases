@@ -12,7 +12,7 @@ Each ticket will have the following sections:
 1. **Setup**: Details on the desired hardware and software setup for this test. The following combinations are possible.
    1. DDS vendor: `FASTDDS`, `CYCLONEDDS` or `CONNEXTDDS`
    2. BuildType:
-      * `binary`: pre-built packaged ROS 2 workspace from [the releases page](https://github.com/ros2/ros2/releases/tag/release-jazzy-beta-20240501)
+      * `binary`: pre-built packaged ROS 2 workspace from [the releases page](https://github.com/ros2/ros2/releases/tag/release-jazzy-beta-20240430)
       * `debian`: pre-built debian packages from the apt repository
       * `source`: building your own workspace from source
    3. Os: `Ubuntu Noble`, `Windows` and `RHEL-9`
