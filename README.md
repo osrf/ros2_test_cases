@@ -493,17 +493,17 @@ Kindly ensure to link the relevant issue ticket when starting a new discussion.
 
   </details>
 
-- [ ] [fastdds, source, amd64, rhel 9](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22)
+- [ ] [fastdds, source, amd64, rhel 9](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22)
 
   <details><summary>Labels</summary>
 
-  - [ ] [installation](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22installation%22)
-  - [ ] [core](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22core%22)
-  - [ ] [overlays](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22overlays%22)
-  - [ ] [ros2cli](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22ros2cli%22)
-  - [ ] [local](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22local%22)
-  - [ ] [rqt](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22rqt%22)
-  - [ ] [visualization](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22visualization%22)
-  - [ ] [rviz](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%209%22+label:%22rviz%22)
+  - [ ] [installation](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22installation%22)
+  - [ ] [core](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22core%22)
+  - [ ] [overlays](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22overlays%22)
+  - [ ] [ros2cli](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22ros2cli%22)
+  - [ ] [local](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22local%22)
+  - [ ] [rqt](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22rqt%22)
+  - [ ] [visualization](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22visualization%22)
+  - [ ] [rviz](https://github.com/osrf/ros2_test_cases/issues?q=is%3Aissue+is%3Aopen+label:%22DDS%3A+FastDDS%22+label:%22Build+type%3A+Source%22+label:%22Chip+set%3A+AMD64%22+label:%22OS%3A+RHEL+9%22+label:%22rviz%22)
 
   </details>
