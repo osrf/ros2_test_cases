@@ -308,9 +308,6 @@ requirements:
       - name: Check `pendulum_teleop`
         try:
           - stdin: ros2 run pendulum_control pendulum_teleop
-      - name: Check `pendulum_launch.bash`
-        try:
-          - stdin: ros2 launch pendulum_control pendulum_launch.bash
       - name: Check `pendulum_logger`
         try:
           - stdin: ros2 run pendulum_control pendulum_logger
