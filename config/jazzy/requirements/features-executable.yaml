@@ -326,9 +326,12 @@ requirements:
       - feature
       - linux
     checks:
+      - name: Run pendulum_demo to generate data
+        try:
+          - stdin: ros2 run pendulum_control pendulum_demo -f pendulum_demo_results
       - name: Check `rttest_plot`
         try:
-          - stdin: ros2 run rttest rttest_plot
+          - stdin: ros2 run rttest rttest_plot -s pendulum_demo_results
   - name: Executables in `dummy_robot_bringup`
     labels:
       - executable
