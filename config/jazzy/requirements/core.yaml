@@ -84,6 +84,7 @@ requirements:
               /add_two_ints_server/describe_parameters
               /add_two_ints_server/get_parameter_types
               /add_two_ints_server/get_parameters
+              /add_two_ints_server/get_type_description
               /add_two_ints_server/list_parameters
               /add_two_ints_server/set_parameters
               /add_two_ints_server/set_parameters_atomically

@@ -490,6 +490,7 @@ requirements:
                 /talker/describe_parameters: rcl_interfaces/srv/DescribeParameters
                 /talker/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
                 /talker/get_parameters: rcl_interfaces/srv/GetParameters
+                /talker/get_type_description: type_description_interfaces/srv/GetTypeDescription
                 /talker/list_parameters: rcl_interfaces/srv/ListParameters
                 /talker/set_parameters: rcl_interfaces/srv/SetParameters
                 /talker/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
@@ -745,6 +746,7 @@ requirements:
               /add_two_ints_server/describe_parameters
               /add_two_ints_server/get_parameter_types
               /add_two_ints_server/get_parameters
+              /add_two_ints_server/get_type_description
               /add_two_ints_server/list_parameters
               /add_two_ints_server/set_parameters
               /add_two_ints_server/set_parameters_atomically
