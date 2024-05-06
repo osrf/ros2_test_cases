@@ -108,6 +108,7 @@ requirements:
                 qos_overrides./parameter_events.publisher.durability
                 qos_overrides./parameter_events.publisher.history
                 qos_overrides./parameter_events.publisher.reliability
+                start_type_description_service
                 use_sim_time
             terminal: 2
   - name: ros2cli network tests

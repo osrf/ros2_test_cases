@@ -567,6 +567,7 @@ requirements:
                         durability: volatile
                         history: keep_last
                         reliability: reliable
+                  start_type_description_service: true
                   use_sim_time: false
       - name: Check get
         try:
@@ -597,6 +598,7 @@ requirements:
               qos_overrides./parameter_events.publisher.durability
               qos_overrides./parameter_events.publisher.history
               qos_overrides./parameter_events.publisher.reliability
+              start_type_description_service
               use_sim_time
       - name: Check set
         try:
