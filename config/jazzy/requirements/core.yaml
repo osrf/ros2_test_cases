@@ -36,7 +36,7 @@ requirements:
             note: Lists launch files in `demo_nodes_cpp`
           - stdin: ros2 launch demo_nodes_cpp ta<tab>
             note: Suggests the launch files name `talker_listener`
-          - stdin: ros2 launch demo_nodes_cpp talker_listener<tab><tab>
+          - stdin: ros2 launch demo_nodes_cpp talker_listener_<tab><tab>
             note: Lists several launch files that start with `talker_listener`
           - stdin: ros2 launch demo_nodes_cpp talker_listener_launch.p<tab>
             note: Completes the launch files name `talker_listener_launch.py`
@@ -108,6 +108,7 @@ requirements:
                 qos_overrides./parameter_events.publisher.durability
                 qos_overrides./parameter_events.publisher.history
                 qos_overrides./parameter_events.publisher.reliability
+                start_type_description_service
                 use_sim_time
             terminal: 2
   - name: ros2cli network tests
