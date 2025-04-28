@@ -12,7 +12,7 @@ The [Issues](https://github.com/osrf/ros2_test_cases/issues) page has several ti
 Each ticket will have the following sections:
 
 1. **Setup**: Details on the desired hardware and software setup for this test. The following combinations are possible.
-   1. DDS vendor: `FASTDDS`, `CYCLONEDDS` or `CONNEXTDDS`
+   1. RMW vendor: `fastdds`, `cyclonedds`, `connextdds` or `zenoh`
    2. BuildType:
       * `binary`: pre-built packaged ROS 2 workspace from [the releases page](https://github.com/ros2/ros2/releases/tag/release-kilted-beta-20240430)
       * `debian`: pre-built debian packages from the apt repository

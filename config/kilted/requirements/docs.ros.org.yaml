@@ -131,7 +131,7 @@ requirements:
   - name: Install Connext Security Plugins
     labels:
       - installation
-      - dds-implementations
+      - rmw-implementations
       - docs
     description: Check the documentation for the 'Install Connext Security Plugins' page
     links:
@@ -145,7 +145,7 @@ requirements:
   - name: Install Connext University Eval
     labels:
       - installation
-      - dds-implementations
+      - rmw-implementations
       - docs
     description: Check the documentation for the 'Install Connext University Eval' page
     links:
@@ -159,7 +159,7 @@ requirements:
   - name: Working with Eclipse CycloneDDS
     labels:
       - installation
-      - dds-implementations
+      - rmw-implementations
       - docs
     description: Check the documentation for the 'Working with Eclipse CycloneDDS' page
     links:
@@ -173,7 +173,7 @@ requirements:
   - name: Working with GurumNetworks GurumDDS
     labels:
       - installation
-      - dds-implementations
+      - rmw-implementations
       - docs
     description: Check the documentation for the 'Working with GurumNetworks GurumDDS' page
     links:
@@ -187,7 +187,7 @@ requirements:
   - name: Working with eProsima Fast DDS
     labels:
       - installation
-      - dds-implementations
+      - rmw-implementations
       - docs
     description: Check the documentation for the 'Working with eProsima Fast DDS' page
     links:

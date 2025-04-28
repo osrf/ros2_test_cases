@@ -3,7 +3,10 @@ translation_map:
   noble: "Ubuntu Noble"
   installType: "Install type"
   fastdds: "FastDDS"
-  dds: "DDS vendor"
+  cyclonedds: "CycloneDDS"
+  connextdds: "ConnextDDS"
+  zenoh: "Zenoh"
+  rmw: "RMW implementation"
 sets:
   # Documentation
   # This is only being run on one combination since this is testing the documentation
@@ -44,7 +47,7 @@ sets:
       - isMatch: false
         name: Recording A Bag From Your Own Node Python
     dimensions:
-      dds:
+      rmw:
         - fastdds
       buildType:
         - debian
@@ -63,9 +66,10 @@ sets:
         labels:
           - windows
     dimensions:
-      dds:
+      rmw:
         - fastdds
         - cyclone
+        - zenoh
       buildType:
         - debian
       os:
@@ -81,7 +85,7 @@ sets:
         labels:
           - linux
     dimensions:
-      dds:
+      rmw:
         - fastdds
         - cyclone
       buildType:
@@ -98,10 +102,11 @@ sets:
         labels:
           - core
     dimensions:
-      dds:
+      rmw:
         - fastdds
         - cyclone
         - connext
+        - zenoh
       buildType:
         - debian
         - binary
@@ -116,10 +121,11 @@ sets:
         labels:
           - core
     dimensions:
-      dds:
+      rmw:
         - fastdds
         - cyclone
         - connext
+        - zenoh
       buildType:
         - binary
         - source
@@ -134,7 +140,7 @@ sets:
         labels:
           - core
     dimensions:
-      dds:
+      rmw:
         - fastdds
       buildType:
         - source
