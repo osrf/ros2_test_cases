@@ -1,0 +1,9 @@
+requirements:
+  - name: Sane development environment
+    labels:
+      - feature
+      - development
+    checks:
+      - name: Test message generation using .msg, .srv, .action and .idl on top of the installed environment.
+        description: |
+          Generate messages from .msg, .srv, and .action files, which will automatically create their .idl files. Additionally, ensure that messages can be generated from .idl files alone.
