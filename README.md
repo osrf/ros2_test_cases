@@ -22,6 +22,9 @@ Each ticket will have the following sections:
 2. **Links**: Any relevant references for this test.
 3. **Checks**: A list of functionalities to validate.
 
+> [!NOTE]
+When running tests with `zenoh`, remember to start the zenoh router by running `ros2 run rmw_zenoh_cpp rmw_zenohd` in a separate terminal.
+
 To contribute, first ensure if you have the relevant setup as described in the ticket.
 If you don't have the setup, you can find the installation instructions at http://docs.ros.org/en/kilted/Installation.html.
 Next, assign the ticket to yourself via the `Assignees` option or comment on the ticket indicating your interest.
