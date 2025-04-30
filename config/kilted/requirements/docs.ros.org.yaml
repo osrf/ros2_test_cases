@@ -1091,125 +1091,153 @@ requirements:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Content Filtering Subscription
+  - name: Creating a content filtering subscription
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Content Filtering Subscription' page
+    description: Check the documentation for the 'Creating a content filtering subscription' page
     links:
-      - name: Content Filtering Subscription page
+      - name: Creating a content filtering subscription page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Content-Filtering-Subscription.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Intra Process Communication
+  - name: Setting up efficient intra-process communication
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Intra Process Communication' page
+    description: Check the documentation for the 'Setting up efficient intra-process communication' page
     links:
-      - name: Intra Process Communication page
+      - name: Setting up efficient intra-process communication page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Intra-Process-Communication.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Logging and logger configuration
+  - name: Logging
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Logging and logger configuration' page
+    description: Check the documentation for the 'Logging' page
     links:
-      - name: Logging and logger configuration page
+      - name: Logging page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Logging-and-logger-configuration.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Managed Nodes
+  - name: Managing nodes with managed lifecycles
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Managed Nodes' page
+    description: Check the documentation for the 'Managing nodes with managed lifecycles' page
     links:
-      - name: Managed Nodes page
+      - name: Managing nodes with managed lifecycles page
         url: https://docs.ros.org/en/kilted/Tutorials/Demos/Managed-Nodes.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Quality of Service
+  - name: Using quality-of-service settings for lossy networks
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Quality of Service' page
+    description: Check the documentation for the 'Using quality-of-service settings for lossy networks' page
     links:
-      - name: Quality of Service page
+      - name: Using quality-of-service settings for lossy networks page
         url: https://docs.ros.org/en/kilted/Tutorials/Demos/Quality-of-Service.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Real Time Programming
+  - name: Understanding real-time programming
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Real Time Programming' page
+    description: Check the documentation for the 'Understanding real-time programming' page
     links:
-      - name: Real Time Programming page
+      - name: Understanding real-time programming page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Real-Time-Programming.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Rosbag with ROS1 Bridge
+  - name: Recording and playing back data with rosbag using the ROS 1 bridge
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Rosbag with ROS1 Bridge' page
+    description: Check the documentation for the 'Recording and playing back data with rosbag using the ROS 1 bridge' page
     links:
-      - name: Rosbag with ROS1 Bridge page
+      - name: Recording and playing back data with rosbag using the ROS 1 bridge page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Rosbag-with-ROS1-Bridge.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Service Introspection
+  - name: Configure service introspection
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'Service Introspection' page
+    description: Check the documentation for the 'Configure service introspection' page
     links:
-      - name: Service Introspection page
+      - name: Configure service introspection page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Demos/Service-Introspection.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: dummy robot demo
+  - name: Configure action introspection
     labels:
       - tutorials
       - demos
       - docs
-    description: Check the documentation for the 'dummy robot demo' page
+    description: Check the documentation for the 'Configure action introspection' page
     links:
-      - name: dummy robot demo page
+      - name: Configure action introspection page
+        url: >-
+          https://docs.ros.org/en/kilted/Tutorials/Demos/Action-Introspection.html
+    checks:
+      - name: I was able to follow the documentation.
+      - name: The documentation seemed clear to me.
+      - name: The documentation didn't have any obvious errors.
+  - name: Experimenting with a dummy robot
+    labels:
+      - tutorials
+      - demos
+      - docs
+    description: Check the documentation for the 'Experimenting with a dummy robot' page
+    links:
+      - name: Experimenting with a dummy robot page
         url: https://docs.ros.org/en/kilted/Tutorials/Demos/dummy-robot-demo.html
+    checks:
+      - name: I was able to follow the documentation.
+      - name: The documentation seemed clear to me.
+      - name: The documentation didn't have any obvious errors.
+  - name: Wait for acknowledgment
+    labels:
+      - tutorials
+      - demos
+      - docs
+    description: Check the documentation for the 'Wait for acknowledgment' page
+    links:
+      - name: Wait for acknowledgment page
+        url: >-
+          https://docs.ros.org/en/kilted/Tutorials/Demos/Wait-for-Acknowledgment.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
