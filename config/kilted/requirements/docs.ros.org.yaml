@@ -1465,15 +1465,15 @@ requirements:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Cpp
+  - name: Cpp Testing
     labels:
       - tutorials
       - intermediate
       - testing
       - docs
-    description: Check the documentation for the 'Cpp' page
+    description: Check the documentation for the 'Writing Basic Tests with C++ with GTest' page
     links:
-      - name: Cpp page
+      - name: Writing Basic Tests with C++ with GTest
         url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Testing/Cpp.html
     checks:
       - name: I was able to follow the documentation.
@@ -1894,30 +1894,30 @@ requirements:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Cpp
+  - name: Writing an Action Server and Client (Cpp)
     labels:
       - tutorials
       - intermediate
       - writing-an-action-server-client
       - docs
-    description: Check the documentation for the 'Cpp' page
+    description: Check the documentation for the 'Writing an action server and client' page
     links:
-      - name: Cpp page
+      - name: Writing an action server and client (C++)
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Py
+  - name: Writing an Action Server and Client (Python)
     labels:
       - tutorials
       - intermediate
       - writing-an-action-server-client
       - docs
-    description: Check the documentation for the 'Py' page
+    description: Check the documentation for the 'Writing an action server and client' page
     links:
-      - name: Py page
+      - name: Writingan action server and client (Python)
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Intermediate/Writing-an-Action-Server-Client/Py.html
     checks:
