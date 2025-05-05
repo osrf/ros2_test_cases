@@ -1575,26 +1575,11 @@ requirements:
       - intermediate
       - tf2
       - docs
-    description: Check the documentation for the 'Learning About Tf2 And Time Cpp' page
+    description: Check the documentation for the 'Using time (C++)' page
     links:
-      - name: Learning About Tf2 And Time Cpp page
+      - name: Using time (C++) page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html
-    checks:
-      - name: I was able to follow the documentation.
-      - name: The documentation seemed clear to me.
-      - name: The documentation didn't have any obvious errors.
-  - name: Learning About Tf2 And Time Py
-    labels:
-      - tutorials
-      - intermediate
-      - tf2
-      - docs
-    description: Check the documentation for the 'Learning About Tf2 And Time Py' page
-    links:
-      - name: Learning About Tf2 And Time Py page
-        url: >-
-          https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Py.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
@@ -1628,47 +1613,31 @@ requirements:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Time Travel With Tf2 Cpp
+  - name: Traveling in time (C++)
     labels:
       - tutorials
       - intermediate
       - tf2
       - docs
-    description: Check the documentation for the 'Time Travel With Tf2 Cpp' page
+    description: Check the documentation for the 'Traveling in time (C++)' page
     links:
-      - name: Time Travel With Tf2 Cpp page
+      - name: Traveling in time (C++) page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html
     checks:
       - name: I was able to follow the documentation.
       - name: The documentation seemed clear to me.
       - name: The documentation didn't have any obvious errors.
-  - name: Time Travel With Tf2 Py
-    labels:
-      - tutorials
-      - intermediate
-      - tf2
-      - docs
-    description: Check the documentation for the 'Time Travel With Tf2 Py' page
-    links:
-      - name: Time Travel With Tf2 Py page
-        url: >-
-          https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Py.html
-    checks:
-      - name: I was able to follow the documentation.
-      - name: The documentation seemed clear to me.
-      - name: The documentation didn't have any obvious errors.
-  - name: Using Stamped Datatypes With Tf2 Ros MessageFilter
+  - name: Using stamped datatypes with tf2_ros::MessageFilter
     labels:
       - tutorials
       - intermediate
       - tf2
       - docs
     description: >-
-      Check the documentation for the 'Using Stamped Datatypes With Tf2 Ros
-      MessageFilter' page
+      Check the documentation for the 'Using stamped datatypes with tf2_ros::MessageFilter' page
     links:
-      - name: Using Stamped Datatypes With Tf2 Ros MessageFilter page
+      - name: Using stamped datatypes with tf2_ros::MessageFilter page
         url: >-
           https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html
     checks:
