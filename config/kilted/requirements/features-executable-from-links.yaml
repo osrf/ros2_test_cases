@@ -203,28 +203,3 @@ requirements:
           - note: |
               You should see that the "reliable" topic has a reception rate that is almost always either 0 or 100%, while the "best effort" topic has a reception rate that fluctuates based on the strength of the connection.
             imageUrl: https://raw.githubusercontent.com/ros2/demos/kilted/topic_monitor/doc/reliability_comparison.png
-  - name: ROS 1 bridge
-    labels:
-      - executable
-      - feature
-      - linux
-      - ros1_bridge
-    links:
-      - name: Reference URL
-        url: https://github.com/ros2/ros1_bridge
-    checks:
-      - name: Build ros1_bridge
-        try:
-          - note: Follow the instructions in the README to compile the bridge
-      - name: Run the birdge with talker and listener
-        try:
-          - note: Follow the instructions in the readme to run Example 1.
-      - name: Run the birdge and exchange images
-        try:
-          - note: Follow the instructions in the readme to run Example 2.
-      - name: Run the birdge and AddTwoInts service
-        try:
-          - note: Follow the instructions in the readme to run Example 3.
-      - name: Run the bridge with only selected topics and services.
-        try:
-          - note: Follow the instructions in the readme to run Example 4.
