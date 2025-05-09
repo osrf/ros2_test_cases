@@ -345,17 +345,17 @@ requirements:
           - note: A large list of all messages, services, and actions is given.
       - name: Check package
         try:
-          - stdin: ros2 interface package turtlesim
+          - stdin: ros2 interface package turtlesim_msgs
         expect:
           - stdout: |
-              turtlesim/srv/TeleportRelative
-              turtlesim/srv/Kill
-              turtlesim/msg/Pose
-              turtlesim/srv/TeleportAbsolute
-              turtlesim/srv/SetPen
-              turtlesim/action/RotateAbsolute
-              turtlesim/srv/Spawn
-              turtlesim/msg/Color
+              turtlesim_msgs/srv/TeleportRelative
+              turtlesim_msgs/srv/Kill
+              turtlesim_msgs/msg/Pose
+              turtlesim_msgs/srv/TeleportAbsolute
+              turtlesim_msgs/srv/SetPen
+              turtlesim_msgs/action/RotateAbsolute
+              turtlesim_msgs/srv/Spawn
+              turtlesim_msgs/msg/Color
       - name: Check packages
         try:
           - stdin: ros2 interface packages
