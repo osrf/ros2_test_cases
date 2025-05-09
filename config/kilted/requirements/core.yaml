@@ -23,6 +23,7 @@ requirements:
       - name: Tab completion
         description: |
           When using a supported shell (i.e. bash), tab completion should work for both the bare executable to list commands and for listing sub-commands, like `ros2 <tab>` or `ros2 <command> tab`
+          [Note]: Skip this test on Windows as tab completion is not supported.
         try:
           - stdin: ros2 <tab><tab>
             note: Lists the commands
