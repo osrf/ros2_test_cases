@@ -22,7 +22,7 @@ requirements:
   - name: Alternatives page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives.html
 - name: Latest Development Setup
-  shortname: latest_development_setup
+  shortname: latest_development_s
   description: Check the documentation for the 'Latest Development Setup' page
   steps:
   - name: I was able to follow the documentation.
@@ -45,7 +45,7 @@ requirements:
   - name: Latest Development Setup page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives/Latest-Development-Setup.html
 - name: RHEL Development Setup
-  shortname: rhel_development_setup
+  shortname: rhel_development_set
   description: Check the documentation for the 'RHEL Development Setup' page
   steps:
   - name: I was able to follow the documentation.
@@ -91,7 +91,7 @@ requirements:
   - name: RHEL Install Binary page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives/RHEL-Install-Binary.html
 - name: Ubuntu Development Setup
-  shortname: ubuntu_development_setup
+  shortname: ubuntu_development_s
   description: Check the documentation for the 'Ubuntu Development Setup' page
   steps:
   - name: I was able to follow the documentation.
@@ -114,7 +114,7 @@ requirements:
   - name: Ubuntu Development Setup page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives/Ubuntu-Development-Setup.html
 - name: Ubuntu Install Binary
-  shortname: ubuntu_install_binary
+  shortname: ubuntu_install_binar
   description: Check the documentation for the 'Ubuntu Install Binary' page
   steps:
   - name: I was able to follow the documentation.
@@ -137,7 +137,7 @@ requirements:
   - name: Ubuntu Install Binary page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives/Ubuntu-Install-Binary.html
 - name: Windows Development Setup
-  shortname: windows_development_setup
+  shortname: windows_development_
   description: Check the documentation for the 'Windows Development Setup' page
   steps:
   - name: I was able to follow the documentation.
@@ -160,7 +160,7 @@ requirements:
   - name: Windows Development Setup page
     url: https://docs.ros.org/en/kilted/Installation/Alternatives/Windows-Development-Setup.html
 - name: macOS Development Setup
-  shortname: mac_os_development_setup
+  shortname: mac_os_development_s
   description: Check the documentation for the 'macOS Development Setup' page
   steps:
   - name: I was able to follow the documentation.
@@ -229,7 +229,7 @@ requirements:
   - name: DDS Implementations page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/DDS-Implementations.html
 - name: Working with RTI Connext DDS
-  shortname: working_with_rti_connext_dds
+  shortname: working_with_rti_con
   description: Check the documentation for the 'Working with RTI Connext DDS' page
   steps:
   - name: I was able to follow the documentation.
@@ -252,7 +252,7 @@ requirements:
   - name: Working with RTI Connext DDS page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/DDS-Implementations/Working-with-RTI-Connext-DDS.html
 - name: Working with Eclipse CycloneDDS
-  shortname: working_with_eclipse_cyclone_dds
+  shortname: working_with_eclipse
   description: Check the documentation for the 'Working with Eclipse CycloneDDS' page
   steps:
   - name: I was able to follow the documentation.
@@ -275,7 +275,7 @@ requirements:
   - name: Working with Eclipse CycloneDDS page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/DDS-Implementations/Working-with-Eclipse-CycloneDDS.html
 - name: Working with GurumNetworks GurumDDS
-  shortname: working_with_gurum_networks_gurum_dds
+  shortname: working_with_gurum_n
   description: Check the documentation for the 'Working with GurumNetworks GurumDDS' page
   steps:
   - name: I was able to follow the documentation.
@@ -298,7 +298,7 @@ requirements:
   - name: Working with GurumNetworks GurumDDS page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/DDS-Implementations/Working-with-GurumNetworks-GurumDDS.html
 - name: Working with eProsima Fast DDS
-  shortname: working_with_e_prosima_fast_dds
+  shortname: working_with_e_prosi
   description: Check the documentation for the 'Working with eProsima Fast DDS' page
   steps:
   - name: I was able to follow the documentation.
@@ -321,7 +321,7 @@ requirements:
   - name: Working with eProsima Fast DDS page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/DDS-Implementations/Working-with-eProsima-Fast-DDS.html
 - name: Non DDS Implementations
-  shortname: non_dds_implementations
+  shortname: non_dds_implementati
   description: Check the documentation for the 'Non DDS Implementations' page
   steps:
   - name: I was able to follow the documentation.
@@ -368,7 +368,7 @@ requirements:
   - name: Working with Zenoh page
     url: https://docs.ros.org/en/kilted/Installation/RMW-Implementations/Non-DDS-Implementations/Working-with-Zenoh.html
 - name: Maintaining a Source Checkout
-  shortname: maintaining_a_source_checkout
+  shortname: maintaining_a_source
   description: Check the documentation for the 'Maintaining a Source Checkout' page
   steps:
   - name: I was able to follow the documentation.
@@ -434,7 +434,7 @@ requirements:
   - name: Testing page
     url: https://docs.ros.org/en/kilted/Installation/Testing.html
 - name: Ubuntu Install Debians
-  shortname: ubuntu_install_debians
+  shortname: ubuntu_install_debia
   description: Check the documentation for the 'Ubuntu Install Debians' page
   steps:
   - name: I was able to follow the documentation.
@@ -456,7 +456,7 @@ requirements:
   - name: Ubuntu Install Debians page
     url: https://docs.ros.org/en/kilted/Installation/Ubuntu-Install-Debians.html
 - name: Windows Install Binary
-  shortname: windows_install_binary
+  shortname: windows_install_bina
   description: Check the documentation for the 'Windows Install Binary' page
   steps:
   - name: I was able to follow the documentation.
@@ -500,7 +500,7 @@ requirements:
   - name: Advanced page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced.html
 - name: Allocator Template Tutorial
-  shortname: allocator_template_tutorial
+  shortname: allocator_template_t
   description: Check the documentation for the 'Allocator Template Tutorial' page
   steps:
   - name: I was able to follow the documentation.
@@ -547,7 +547,7 @@ requirements:
   - name: Discovery Server page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Discovery-Server/Discovery-Server.html
 - name: FastDDS Configuration
-  shortname: fast_dds_configuration
+  shortname: fast_dds_configurati
   description: Check the documentation for the 'FastDDS Configuration' page
   steps:
   - name: I was able to follow the documentation.
@@ -570,7 +570,7 @@ requirements:
   - name: FastDDS Configuration page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/FastDDS-Configuration.html
 - name: Improved Dynamic Discovery
-  shortname: improved_dynamic_discovery
+  shortname: improved_dynamic_dis
   description: Check the documentation for the 'Improved Dynamic Discovery' page
   steps:
   - name: I was able to follow the documentation.
@@ -593,7 +593,7 @@ requirements:
   - name: Improved Dynamic Discovery page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Improved-Dynamic-Discovery.html
 - name: ROS2 Tracing Trace and Analyze
-  shortname: ros_2_tracing_trace_and_analyze
+  shortname: ros_2_tracing_trace_
   description: Check the documentation for the 'ROS2 Tracing Trace and Analyze' page
   steps:
   - name: I was able to follow the documentation.
@@ -616,7 +616,7 @@ requirements:
   - name: ROS2 Tracing Trace and Analyze page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html
 - name: Reading From A Bag File CPP
-  shortname: reading_from_a_bag_file_cpp
+  shortname: reading_from_a_bag_f
   description: Check the documentation for the 'Reading From A Bag File CPP' page
   steps:
   - name: I was able to follow the documentation.
@@ -639,7 +639,7 @@ requirements:
   - name: Reading From A Bag File CPP page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Reading-From-A-Bag-File-CPP.html
 - name: Recording A Bag From Your Own Node CPP
-  shortname: recording_a_bag_from_your_own_node_cpp
+  shortname: recording_a_bag_from
   description: Check the documentation for the 'Recording A Bag From Your Own Node CPP' page
   steps:
   - name: I was able to follow the documentation.
@@ -662,7 +662,7 @@ requirements:
   - name: Recording A Bag From Your Own Node CPP page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Recording-A-Bag-From-Your-Own-Node-CPP.html
 - name: Recording A Bag From Your Own Node Py
-  shortname: recording_a_bag_from_your_own_node_py
+  shortname: recording_a_bag_fr_1
   description: Check the documentation for the 'Recording A Bag From Your Own Node Py' page
   steps:
   - name: I was able to follow the documentation.
@@ -709,7 +709,7 @@ requirements:
   - name: Access Controls page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Security/Access-Controls.html
 - name: Deployment Guidelines
-  shortname: deployment_guidelines
+  shortname: deployment_guideline
   description: Check the documentation for the 'Deployment Guidelines' page
   steps:
   - name: I was able to follow the documentation.
@@ -757,7 +757,7 @@ requirements:
   - name: Examine Traffic page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Security/Examine-Traffic.html
 - name: Introducing ros2 security
-  shortname: introducing_ros_2_security
+  shortname: introducing_ros_2_se
   description: Check the documentation for the 'Introducing ros2 security' page
   steps:
   - name: I was able to follow the documentation.
@@ -1002,7 +1002,7 @@ requirements:
   - name: Installation Windows page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Simulators/Webots/Installation-Windows.html
 - name: Setting Up Simulation Webots Advanced
-  shortname: setting_up_simulation_webots_advanced
+  shortname: setting_up_simulatio
   description: Check the documentation for the 'Setting Up Simulation Webots Advanced' page
   steps:
   - name: I was able to follow the documentation.
@@ -1027,7 +1027,7 @@ requirements:
   - name: Setting Up Simulation Webots Advanced page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Simulators/Webots/Setting-Up-Simulation-Webots-Advanced.html
 - name: Setting Up Simulation Webots Basic
-  shortname: setting_up_simulation_webots_basic
+  shortname: setting_up_simulat_1
   description: Check the documentation for the 'Setting Up Simulation Webots Basic' page
   steps:
   - name: I was able to follow the documentation.
@@ -1052,7 +1052,7 @@ requirements:
   - name: Setting Up Simulation Webots Basic page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Simulators/Webots/Setting-Up-Simulation-Webots-Basic.html
 - name: Simulation Reset Handler
-  shortname: simulation_reset_handler
+  shortname: simulation_reset_han
   description: Check the documentation for the 'Simulation Reset Handler' page
   steps:
   - name: I was able to follow the documentation.
@@ -1077,7 +1077,7 @@ requirements:
   - name: Simulation Reset Handler page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Simulators/Webots/Simulation-Reset-Handler.html
 - name: Simulation Supervisor
-  shortname: simulation_supervisor
+  shortname: simulation_superviso
   description: Check the documentation for the 'Simulation Supervisor' page
   steps:
   - name: I was able to follow the documentation.
@@ -1127,7 +1127,7 @@ requirements:
   - name: Simulation Webots page
     url: https://docs.ros.org/en/kilted/Tutorials/Advanced/Simulators/Webots/Simulation-Webots.html
 - name: Topic Statistics Tutorial
-  shortname: topic_statistics_tutorial
+  shortname: topic_statistics_tut
   description: Check the documentation for the 'Topic Statistics Tutorial' page
   steps:
   - name: I was able to follow the documentation.
@@ -1173,7 +1173,7 @@ requirements:
   - name: Beginner CLI Tools page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools.html
 - name: Configuring ROS2 Environment
-  shortname: configuring_ros_2_environment
+  shortname: configuring_ros_2_en
   description: Check the documentation for the 'Configuring ROS2 Environment' page
   steps:
   - name: I was able to follow the documentation.
@@ -1196,7 +1196,7 @@ requirements:
   - name: Configuring ROS2 Environment page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html
 - name: Introducing Turtlesim
-  shortname: introducing_turtlesim
+  shortname: introducing_turtlesi
   description: Check the documentation for the 'Introducing Turtlesim' page
   steps:
   - name: I was able to follow the documentation.
@@ -1220,7 +1220,7 @@ requirements:
   - name: Introducing Turtlesim page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html
 - name: Launching Multiple Nodes
-  shortname: launching_multiple_nodes
+  shortname: launching_multiple_n
   description: Check the documentation for the 'Launching Multiple Nodes' page
   steps:
   - name: I was able to follow the documentation.
@@ -1244,7 +1244,7 @@ requirements:
   - name: Launching Multiple Nodes page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html
 - name: Recording And Playing Back Data
-  shortname: recording_and_playing_back_data
+  shortname: recording_and_playin
   description: Check the documentation for the 'Recording And Playing Back Data' page
   steps:
   - name: I was able to follow the documentation.
@@ -1268,7 +1268,7 @@ requirements:
   - name: Recording And Playing Back Data page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html
 - name: Understanding ROS2 Actions
-  shortname: understanding_ros_2_actions
+  shortname: understanding_ros_2_
   description: Check the documentation for the 'Understanding ROS2 Actions' page
   steps:
   - name: I was able to follow the documentation.
@@ -1292,7 +1292,7 @@ requirements:
   - name: Understanding ROS2 Actions page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html
 - name: Understanding ROS2 Nodes
-  shortname: understanding_ros_2_nodes
+  shortname: understanding_ros__1
   description: Check the documentation for the 'Understanding ROS2 Nodes' page
   steps:
   - name: I was able to follow the documentation.
@@ -1316,7 +1316,7 @@ requirements:
   - name: Understanding ROS2 Nodes page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html
 - name: Understanding ROS2 Parameters
-  shortname: understanding_ros_2_parameters
+  shortname: understanding_ros__2
   description: Check the documentation for the 'Understanding ROS2 Parameters' page
   steps:
   - name: I was able to follow the documentation.
@@ -1340,7 +1340,7 @@ requirements:
   - name: Understanding ROS2 Parameters page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html
 - name: Understanding ROS2 Services
-  shortname: understanding_ros_2_services
+  shortname: understanding_ros__3
   description: Check the documentation for the 'Understanding ROS2 Services' page
   steps:
   - name: I was able to follow the documentation.
@@ -1364,7 +1364,7 @@ requirements:
   - name: Understanding ROS2 Services page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html
 - name: Understanding ROS2 Topics
-  shortname: understanding_ros_2_topics
+  shortname: understanding_ros__4
   description: Check the documentation for the 'Understanding ROS2 Topics' page
   steps:
   - name: I was able to follow the documentation.
@@ -1412,7 +1412,7 @@ requirements:
   - name: Using Rqt Console page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html
 - name: Beginner Client Libraries
-  shortname: beginner_client_libraries
+  shortname: beginner_client_libr
   description: Check the documentation for the 'Beginner Client Libraries' page
   steps:
   - name: I was able to follow the documentation.
@@ -1481,7 +1481,7 @@ requirements:
   - name: Creating A Workspace page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html
 - name: Creating Your First ROS2 Package
-  shortname: creating_your_first_ros_2_package
+  shortname: creating_your_first_
   description: Check the documentation for the 'Creating Your First ROS2 Package' page
   steps:
   - name: I was able to follow the documentation.
@@ -1504,7 +1504,7 @@ requirements:
   - name: Creating Your First ROS2 Package page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html
 - name: Custom ROS2 Interfaces
-  shortname: custom_ros_2_interfaces
+  shortname: custom_ros_2_interfa
   description: Check the documentation for the 'Custom ROS2 Interfaces' page
   steps:
   - name: I was able to follow the documentation.
@@ -1527,7 +1527,7 @@ requirements:
   - name: Custom ROS2 Interfaces page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html
 - name: Getting Started With Ros2doctor
-  shortname: getting_started_with_ros_2_doctor
+  shortname: getting_started_with
   description: Check the documentation for the 'Getting Started With Ros2doctor' page
   steps:
   - name: I was able to follow the documentation.
@@ -1573,7 +1573,7 @@ requirements:
   - name: Pluginlib page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Pluginlib.html
 - name: Single Package Define And Use Interface
-  shortname: single_package_define_and_use_interface
+  shortname: single_package_defin
   description: Check the documentation for the 'Single Package Define And Use Interface' page
   steps:
   - name: I was able to follow the documentation.
@@ -1596,7 +1596,7 @@ requirements:
   - name: Single Package Define And Use Interface page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html
 - name: Using Parameters In A Class CPP
-  shortname: using_parameters_in_a_class_cpp
+  shortname: using_parameters_in_
   description: Check the documentation for the 'Using Parameters In A Class CPP' page
   steps:
   - name: I was able to follow the documentation.
@@ -1619,7 +1619,7 @@ requirements:
   - name: Using Parameters In A Class CPP page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP.html
 - name: Using Parameters In A Class Python
-  shortname: using_parameters_in_a_class_python
+  shortname: using_parameters_i_1
   description: Check the documentation for the 'Using Parameters In A Class Python' page
   steps:
   - name: I was able to follow the documentation.
@@ -1642,7 +1642,7 @@ requirements:
   - name: Using Parameters In A Class Python page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html
 - name: Writing A Simple Cpp Publisher And Subscriber
-  shortname: writing_a_simple_cpp_publisher_and_subscriber
+  shortname: writing_a_simple_cpp
   description: Check the documentation for the 'Writing A Simple Cpp Publisher And Subscriber' page
   steps:
   - name: I was able to follow the documentation.
@@ -1665,7 +1665,7 @@ requirements:
   - name: Writing A Simple Cpp Publisher And Subscriber page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
 - name: Writing A Simple Cpp Service And Client
-  shortname: writing_a_simple_cpp_service_and_client
+  shortname: writing_a_simple_c_1
   description: Check the documentation for the 'Writing A Simple Cpp Service And Client' page
   steps:
   - name: I was able to follow the documentation.
@@ -1688,7 +1688,7 @@ requirements:
   - name: Writing A Simple Cpp Service And Client page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Service-And-Client.html
 - name: Writing A Simple Py Publisher And Subscriber
-  shortname: writing_a_simple_py_publisher_and_subscriber
+  shortname: writing_a_simple_py_
   description: Check the documentation for the 'Writing A Simple Py Publisher And Subscriber' page
   steps:
   - name: I was able to follow the documentation.
@@ -1711,7 +1711,7 @@ requirements:
   - name: Writing A Simple Py Publisher And Subscriber page
     url: https://docs.ros.org/en/kilted/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html
 - name: Writing A Simple Py Service And Client
-  shortname: writing_a_simple_py_service_and_client
+  shortname: writing_a_simple_p_1
   description: Check the documentation for the 'Writing A Simple Py Service And Client' page
   steps:
   - name: I was able to follow the documentation.
@@ -1756,7 +1756,7 @@ requirements:
   - name: Demos page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos.html
 - name: Creating a content filtering subscription
-  shortname: creating_a_content_filtering_subscription
+  shortname: creating_a_content_f
   description: Check the documentation for the 'Creating a content filtering subscription' page
   steps:
   - name: I was able to follow the documentation.
@@ -1779,7 +1779,7 @@ requirements:
   - name: Creating a content filtering subscription page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Content-Filtering-Subscription.html
 - name: Setting up efficient intra-process communication
-  shortname: setting_up_efficient_intra_process_communication
+  shortname: setting_up_efficient
   description: Check the documentation for the 'Setting up efficient intra-process communication' page
   steps:
   - name: I was able to follow the documentation.
@@ -1825,7 +1825,7 @@ requirements:
   - name: Logging page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Logging-and-logger-configuration.html
 - name: Managing nodes with managed lifecycles
-  shortname: managing_nodes_with_managed_lifecycles
+  shortname: managing_nodes_with_
   description: Check the documentation for the 'Managing nodes with managed lifecycles' page
   steps:
   - name: I was able to follow the documentation.
@@ -1848,7 +1848,7 @@ requirements:
   - name: Managing nodes with managed lifecycles page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Managed-Nodes.html
 - name: Using quality-of-service settings for lossy networks
-  shortname: using_quality_of_service_settings_for_lossy_networks
+  shortname: using_quality_of_ser
   description: Check the documentation for the 'Using quality-of-service settings for lossy networks' page
   steps:
   - name: I was able to follow the documentation.
@@ -1871,7 +1871,7 @@ requirements:
   - name: Using quality-of-service settings for lossy networks page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Quality-of-Service.html
 - name: Understanding real-time programming
-  shortname: understanding_real_time_programming
+  shortname: understanding_real_t
   description: Check the documentation for the 'Understanding real-time programming' page
   steps:
   - name: I was able to follow the documentation.
@@ -1894,7 +1894,7 @@ requirements:
   - name: Understanding real-time programming page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Real-Time-Programming.html
 - name: Configure service introspection
-  shortname: configure_service_introspection
+  shortname: configure_service_in
   description: Check the documentation for the 'Configure service introspection' page
   steps:
   - name: I was able to follow the documentation.
@@ -1917,7 +1917,7 @@ requirements:
   - name: Configure service introspection page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Service-Introspection.html
 - name: Configure action introspection
-  shortname: configure_action_introspection
+  shortname: configure_action_int
   description: Check the documentation for the 'Configure action introspection' page
   steps:
   - name: I was able to follow the documentation.
@@ -1940,7 +1940,7 @@ requirements:
   - name: Configure action introspection page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/Action-Introspection.html
 - name: Experimenting with a dummy robot
-  shortname: experimenting_with_a_dummy_robot
+  shortname: experimenting_with_a
   description: Check the documentation for the 'Experimenting with a dummy robot' page
   steps:
   - name: I was able to follow the documentation.
@@ -1963,7 +1963,7 @@ requirements:
   - name: Experimenting with a dummy robot page
     url: https://docs.ros.org/en/kilted/Tutorials/Demos/dummy-robot-demo.html
 - name: Wait for acknowledgment
-  shortname: wait_for_acknowledgment
+  shortname: wait_for_acknowledgm
   description: Check the documentation for the 'Wait for acknowledgment' page
   steps:
   - name: I was able to follow the documentation.
@@ -2054,7 +2054,7 @@ requirements:
   - name: Creating an Action page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Creating-an-Action.html
 - name: Creating Launch Files
-  shortname: creating_launch_files
+  shortname: creating_launch_file
   description: Check the documentation for the 'Creating Launch Files' page
   steps:
   - name: I was able to follow the documentation.
@@ -2150,7 +2150,7 @@ requirements:
   - name: Using Event Handlers page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Launch/Using-Event-Handlers.html
 - name: Using ROS2 Launch For Large Projects
-  shortname: using_ros_2_launch_for_large_projects
+  shortname: using_ros_2_launch_f
   description: Check the documentation for the 'Using ROS2 Launch For Large Projects' page
   steps:
   - name: I was able to follow the documentation.
@@ -2198,7 +2198,7 @@ requirements:
   - name: Using Substitutions page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Launch/Using-Substitutions.html
 - name: Monitoring For Parameter Changes CPP
-  shortname: monitoring_for_parameter_changes_cpp
+  shortname: monitoring_for_param
   description: Check the documentation for the 'Monitoring For Parameter Changes CPP' page
   steps:
   - name: I was able to follow the documentation.
@@ -2221,7 +2221,7 @@ requirements:
   - name: Monitoring For Parameter Changes CPP page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Monitoring-For-Parameter-Changes-CPP.html
 - name: Monitoring For Parameter Changes Python
-  shortname: monitoring_for_parameter_changes_python
+  shortname: monitoring_for_par_1
   description: Check the documentation for the 'Monitoring For Parameter Changes Python' page
   steps:
   - name: I was able to follow the documentation.
@@ -2485,7 +2485,7 @@ requirements:
   - name: Adding A Frame Py page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html
 - name: Debugging Tf2 Problems
-  shortname: debugging_tf_2_problems
+  shortname: debugging_tf_2_probl
   description: Check the documentation for the 'Debugging Tf2 Problems' page
   steps:
   - name: I was able to follow the documentation.
@@ -2533,7 +2533,7 @@ requirements:
   - name: Introduction To Tf2 page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html
 - name: Learning About Tf2 And Time Cpp
-  shortname: learning_about_tf_2_and_time_cpp
+  shortname: learning_about_tf_2_
   description: Check the documentation for the 'Using time (C++)' page
   steps:
   - name: I was able to follow the documentation.
@@ -2557,7 +2557,7 @@ requirements:
   - name: Using time (C++) page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html
 - name: Quaternion Fundamentals
-  shortname: quaternion_fundamentals
+  shortname: quaternion_fundament
   description: Check the documentation for the 'Quaternion Fundamentals' page
   steps:
   - name: I was able to follow the documentation.
@@ -2605,7 +2605,7 @@ requirements:
   - name: Tf2 Main page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Tf2-Main.html
 - name: Traveling in time (C++)
-  shortname: traveling_in_time_(c++)
+  shortname: traveling_in_time_(c
   description: Check the documentation for the 'Traveling in time (C++)' page
   steps:
   - name: I was able to follow the documentation.
@@ -2629,7 +2629,7 @@ requirements:
   - name: Traveling in time (C++) page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html
 - name: Using stamped datatypes with tf2_ros::MessageFilter
-  shortname: using_stamped_datatypes_with_tf_2_ros::message_filter
+  shortname: using_stamped_dataty
   description: Check the documentation for the 'Using stamped datatypes with tf2_ros::MessageFilter' page
   steps:
   - name: I was able to follow the documentation.
@@ -2653,7 +2653,7 @@ requirements:
   - name: Using stamped datatypes with tf2_ros::MessageFilter page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Using-Stamped-Datatypes-With-Tf2-Ros-MessageFilter.html
 - name: Writing A Tf2 Broadcaster Cpp
-  shortname: writing_a_tf_2_broadcaster_cpp
+  shortname: writing_a_tf_2_broad
   description: Check the documentation for the 'Writing A Tf2 Broadcaster Cpp' page
   steps:
   - name: I was able to follow the documentation.
@@ -2677,7 +2677,7 @@ requirements:
   - name: Writing A Tf2 Broadcaster Cpp page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html
 - name: Writing A Tf2 Broadcaster Py
-  shortname: writing_a_tf_2_broadcaster_py
+  shortname: writing_a_tf_2_bro_1
   description: Check the documentation for the 'Writing A Tf2 Broadcaster Py' page
   steps:
   - name: I was able to follow the documentation.
@@ -2701,7 +2701,7 @@ requirements:
   - name: Writing A Tf2 Broadcaster Py page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html
 - name: Writing A Tf2 Listener Cpp
-  shortname: writing_a_tf_2_listener_cpp
+  shortname: writing_a_tf_2_liste
   description: Check the documentation for the 'Writing A Tf2 Listener Cpp' page
   steps:
   - name: I was able to follow the documentation.
@@ -2725,7 +2725,7 @@ requirements:
   - name: Writing A Tf2 Listener Cpp page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html
 - name: Writing A Tf2 Listener Py
-  shortname: writing_a_tf_2_listener_py
+  shortname: writing_a_tf_2_lis_1
   description: Check the documentation for the 'Writing A Tf2 Listener Py' page
   steps:
   - name: I was able to follow the documentation.
@@ -2749,7 +2749,7 @@ requirements:
   - name: Writing A Tf2 Listener Py page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html
 - name: Writing A Tf2 Static Broadcaster Cpp
-  shortname: writing_a_tf_2_static_broadcaster_cpp
+  shortname: writing_a_tf_2_stati
   description: Check the documentation for the 'Writing A Tf2 Static Broadcaster Cpp' page
   steps:
   - name: I was able to follow the documentation.
@@ -2773,7 +2773,7 @@ requirements:
   - name: Writing A Tf2 Static Broadcaster Cpp page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html
 - name: Writing A Tf2 Static Broadcaster Py
-  shortname: writing_a_tf_2_static_broadcaster_py
+  shortname: writing_a_tf_2_sta_1
   description: Check the documentation for the 'Writing A Tf2 Static Broadcaster Py' page
   steps:
   - name: I was able to follow the documentation.
@@ -2797,7 +2797,7 @@ requirements:
   - name: Writing A Tf2 Static Broadcaster Py page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html
 - name: Adding Physical and Collision Properties to a URDF Model
-  shortname: adding_physical_and_collision_properties_to_a_urdf_model
+  shortname: adding_physical_and_
   description: Check the documentation for the 'Adding Physical and Collision Properties to a URDF Model' page
   steps:
   - name: I was able to follow the documentation.
@@ -2821,7 +2821,7 @@ requirements:
   - name: Adding Physical and Collision Properties to a URDF Model page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/Adding-Physical-and-Collision-Properties-to-a-URDF-Model.html
 - name: Building a Movable Robot Model with URDF
-  shortname: building_a_movable_robot_model_with_urdf
+  shortname: building_a_movable_r
   description: Check the documentation for the 'Building a Movable Robot Model with URDF' page
   steps:
   - name: I was able to follow the documentation.
@@ -2845,7 +2845,7 @@ requirements:
   - name: Building a Movable Robot Model with URDF page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html
 - name: Building a Visual Robot Model with URDF from Scratch
-  shortname: building_a_visual_robot_model_with_urdf_from_scratch
+  shortname: building_a_visual_ro
   description: Check the documentation for the 'Building a Visual Robot Model with URDF from Scratch' page
   steps:
   - name: I was able to follow the documentation.
@@ -2869,7 +2869,7 @@ requirements:
   - name: Building a Visual Robot Model with URDF from Scratch page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html
 - name: Exporting an URDF File
-  shortname: exporting_an_urdf_file
+  shortname: exporting_an_urdf_fi
   description: Check the documentation for the 'Exporting an URDF File' page
   steps:
   - name: I was able to follow the documentation.
@@ -2917,7 +2917,7 @@ requirements:
   - name: URDF Main page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/URDF-Main.html
 - name: Using URDF with Robot State Publisher
-  shortname: using_urdf_with_robot_state_publisher
+  shortname: using_urdf_with_robo
   description: Check the documentation for the 'Using URDF with Robot State Publisher' page
   steps:
   - name: I was able to follow the documentation.
@@ -2941,7 +2941,7 @@ requirements:
   - name: Using URDF with Robot State Publisher page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/Using-URDF-with-Robot-State-Publisher.html
 - name: Using Xacro to Clean Up a URDF File
-  shortname: using_xacro_to_clean_up_a_urdf_file
+  shortname: using_xacro_to_clean
   description: Check the documentation for the 'Using Xacro to Clean Up a URDF File' page
   steps:
   - name: I was able to follow the documentation.
@@ -2965,7 +2965,7 @@ requirements:
   - name: Using Xacro to Clean Up a URDF File page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/URDF/Using-Xacro-to-Clean-Up-a-URDF-File.html
 - name: Writing a Composable Node
-  shortname: writing_a_composable_node
+  shortname: writing_a_composable
   description: Check the documentation for the 'Writing a Composable Node' page
   steps:
   - name: I was able to follow the documentation.
@@ -2988,7 +2988,7 @@ requirements:
   - name: Writing a Composable Node page
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Writing-a-Composable-Node.html
 - name: Writing an Action Server and Client (Cpp)
-  shortname: writing_an_action_server_and_client_(cpp)
+  shortname: writing_an_action_se
   description: Check the documentation for the 'Writing an action server and client' page
   steps:
   - name: I was able to follow the documentation.
@@ -3012,7 +3012,7 @@ requirements:
   - name: Writing an action server and client (C++)
     url: https://docs.ros.org/en/kilted/Tutorials/Intermediate/Writing-an-Action-Server-Client/Cpp.html
 - name: Writing an Action Server and Client (Python)
-  shortname: writing_an_action_server_and_client_(python)
+  shortname: writing_an_action__1
   description: Check the documentation for the 'Writing an action server and client' page
   steps:
   - name: I was able to follow the documentation.
@@ -3058,7 +3058,7 @@ requirements:
   - name: Miscellaneous page
     url: https://docs.ros.org/en/kilted/Tutorials/Miscellaneous.html
 - name: Building ROS2 Package with eclipse 2021 06
-  shortname: building_ros_2_package_with_eclipse_2021_06
+  shortname: building_ros_2_packa
   description: Check the documentation for the 'Building ROS2 Package with eclipse 2021 06' page
   steps:
   - name: I was able to follow the documentation.
@@ -3081,7 +3081,7 @@ requirements:
   - name: Building ROS2 Package with eclipse 2021 06 page
     url: https://docs.ros.org/en/kilted/Tutorials/Miscellaneous/Building-ROS2-Package-with-eclipse-2021-06.html
 - name: Building Realtime rt_preempt kernel for ROS 2
-  shortname: building_realtime_rt_preempt_kernel_for_ros_2
+  shortname: building_realtime_rt
   description: Check the documentation for the 'Building Realtime rt_preempt kernel for ROS 2' page
   steps:
   - name: I was able to follow the documentation.
@@ -3104,7 +3104,7 @@ requirements:
   - name: Building Realtime rt_preempt kernel for ROS 2 page
     url: https://docs.ros.org/en/kilted/Tutorials/Miscellaneous/Building-Realtime-rt_preempt-kernel-for-ROS-2.html
 - name: Deploying ROS 2 on IBM Cloud
-  shortname: deploying_ros_2_on_ibm_cloud
+  shortname: deploying_ros_2_on_i
   description: Check the documentation for the 'Deploying ROS 2 on IBM Cloud' page
   steps:
   - name: I was able to follow the documentation.
@@ -3127,7 +3127,7 @@ requirements:
   - name: Deploying ROS 2 on IBM Cloud page
     url: https://docs.ros.org/en/kilted/Tutorials/Miscellaneous/Deploying-ROS-2-on-IBM-Cloud.html
 - name: Eclipse Oxygen with ROS 2 and rviz2
-  shortname: eclipse_oxygen_with_ros_2_and_rviz_2
+  shortname: eclipse_oxygen_with_
   description: Check the documentation for the 'Eclipse Oxygen with ROS 2 and rviz2' page
   steps:
   - name: I was able to follow the documentation.

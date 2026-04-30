@@ -1,6 +1,6 @@
 requirements:
 - name: Sane development environment
-  shortname: sane_development_environment
+  shortname: sane_development_env
   description: ''
   steps:
   - name: Test message generation using .msg, .srv, .action and .idl on top of the installed environment.

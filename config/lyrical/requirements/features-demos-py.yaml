@@ -1,6 +1,6 @@
 requirements:
 - name: Topic executables in `demo_nodes_py`
-  shortname: topic_executables_in_`demo_nodes_py`
+  shortname: topic_executables_in
   description: ''
   steps:
   - name: Check `listener` and `talker`
@@ -39,7 +39,7 @@ requirements:
   - demos-py
   links: null
 - name: Service executables in `demo_nodes_py`
-  shortname: service_executables_in_`demo_nodes_py`
+  shortname: service_executables_
   description: ''
   steps:
   - name: Add two ints
@@ -68,7 +68,7 @@ requirements:
   - demos-py
   links: null
 - name: Parameter executables in `demo_nodes_py`
-  shortname: parameter_executables_in_`demo_nodes_py`
+  shortname: parameter_executable
   description: ''
   steps:
   - name: Async parameter client
@@ -133,7 +133,7 @@ requirements:
   - demos-py
   links: null
 - name: Check Lifecyle node py
-  shortname: check_lifecyle_node_py
+  shortname: check_lifecyle_node_
   description: ''
   steps:
   - name: Check `listener` and `talker`

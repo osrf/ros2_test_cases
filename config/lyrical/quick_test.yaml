@@ -5,9 +5,9 @@ workspace_version: 0.0.1
 yatm_v2_version: 1.0.0
 requirements_dirs: [requirements]
 test_cases_builders_dirs:
-- test_cases
+- simple
 new_requirements_dir: requirements
-new_test_cases_builder_dir: test_cases
+new_test_cases_builder_dir: simple
 generated_files_dir: generated_files
 labels:
 - name: 'Invalid'

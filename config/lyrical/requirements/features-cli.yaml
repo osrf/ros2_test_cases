@@ -134,7 +134,7 @@ requirements:
   - ros2bag
   links: null
 - name: Check ROS 2 component CLI
-  shortname: check_ros_2_component_cli
+  shortname: check_ros_2_componen
   description: ''
   steps:
   - name: Check list
@@ -284,7 +284,7 @@ requirements:
   - ros2component
   links: null
 - name: Check ROS 2 daemon CLI
-  shortname: check_ros_2_daemon_cli
+  shortname: check_ros_2_daemon_c
   description: ''
   steps:
   - name: Check status
@@ -343,7 +343,7 @@ requirements:
   - ros2daemon
   links: null
 - name: Check ROS 2 doctor CLI
-  shortname: check_ros_2_doctor_cli
+  shortname: check_ros_2_doctor_c
   description: ''
   steps:
   - name: Check `-r`
@@ -447,7 +447,7 @@ requirements:
   - ros2wtf
   links: null
 - name: Check ROS 2 interface CLI
-  shortname: check_ros_2_interface_cli
+  shortname: check_ros_2_interfac
   description: ''
   steps:
   - name: Check list
@@ -537,7 +537,7 @@ requirements:
   - ros2interface
   links: null
 - name: Check ROS 2 launch CLI
-  shortname: check_ros_2_launch_cli
+  shortname: check_ros_2_launch_c
   description: ''
   steps:
   - name: Check launch package
@@ -594,7 +594,7 @@ requirements:
   - ros2launch
   links: null
 - name: Check ROS 2 Multicast CLI
-  shortname: check_ros_2_multicast_cli
+  shortname: check_ros_2_multicas
   description: ''
   steps:
   - name: Check send and receive
@@ -682,7 +682,7 @@ requirements:
   - ros2node
   links: null
 - name: Check ROS 2 Param CLI
-  shortname: check_ros_2_param_cli
+  shortname: check_ros_2_param_cl
   description: ''
   steps:
   - name: Check delete
@@ -904,7 +904,7 @@ requirements:
   - ros2run
   links: null
 - name: Check ROS 2 security CLI on Linux
-  shortname: check_ros_2_security_cli_on_linux
+  shortname: check_ros_2_security
   description: ''
   steps:
   - name: The Linux tutorials work
@@ -920,7 +920,7 @@ requirements:
   - name: Tutorial URL
     url: https://github.com/ros2/sros2/blob/master/SROS2_Linux.md
 - name: Check ROS 2 security CLI on Windows
-  shortname: check_ros_2_security_cli_on_windows
+  shortname: check_ros_2_securi_1
   description: ''
   steps:
   - name: The Linux tutorials work
@@ -936,7 +936,7 @@ requirements:
   - name: Tutorial URL
     url: https://github.com/ros2/sros2/blob/master/SROS2_Windows.md
 - name: Check ROS 2 service CLI
-  shortname: check_ros_2_service_cli
+  shortname: check_ros_2_service_
   description: ''
   steps:
   - name: Check call
@@ -1016,7 +1016,7 @@ requirements:
   - ros2service
   links: null
 - name: Check ROS 2 topic CLI
-  shortname: check_ros_2_topic_cli
+  shortname: check_ros_2_topic_cl
   description: ''
   steps:
   - name: Check bw

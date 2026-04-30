@@ -1,6 +1,6 @@
 requirements:
 - name: Service introspection cpp
-  shortname: service_introspection_cpp
+  shortname: service_introspectio
   description: ''
   steps:
   - name: Run the client and server

@@ -1,6 +1,6 @@
 requirements:
 - name: Executables in `quality_of_service_demo_cpp`
-  shortname: executables_in_`quality_of_service_demo_cpp`
+  shortname: executables_in_`qual
   description: ''
   steps:
   - name: Check `lifespan`
@@ -29,7 +29,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `quality_of_service_demo_py`
-  shortname: executables_in_`quality_of_service_demo_py`
+  shortname: executables_in_`qu_1
   description: ''
   steps:
   - name: Check `lifespan`
@@ -58,7 +58,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `lifecycle`
-  shortname: executables_in_`lifecycle`
+  shortname: executables_in_`life
   description: ''
   steps:
   - name: Check `lifecycle_demo_launch.py`
@@ -73,7 +73,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `tf2_ros`
-  shortname: executables_in_`tf_2_ros`
+  shortname: executables_in_`tf_2
   description: ''
   steps:
   - name: Check `tf2_echo`
@@ -102,7 +102,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_publisher`
-  shortname: executables_in_`examples_rclcpp_minimal_publisher`
+  shortname: executables_in_`exam
   description: ''
   steps:
   - name: Check `publisher_lambda`
@@ -131,7 +131,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_subscriber`
-  shortname: executables_in_`examples_rclcpp_minimal_subscriber`
+  shortname: executables_in_`ex_1
   description: ''
   steps:
   - name: Check `subscriber_lambda`
@@ -160,7 +160,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_service`
-  shortname: executables_in_`examples_rclcpp_minimal_service`
+  shortname: executables_in_`ex_2
   description: ''
   steps:
   - name: Check `service_main`
@@ -175,7 +175,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_client`
-  shortname: executables_in_`examples_rclcpp_minimal_client`
+  shortname: executables_in_`ex_3
   description: ''
   steps:
   - name: Check `client_main`
@@ -190,7 +190,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_composition`
-  shortname: executables_in_`examples_rclcpp_minimal_composition`
+  shortname: executables_in_`ex_4
   description: ''
   steps:
   - name: Check `composition_composed`
@@ -219,7 +219,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_action_server`
-  shortname: executables_in_`examples_rclcpp_minimal_action_server`
+  shortname: executables_in_`ex_5
   description: ''
   steps:
   - name: Check `action_server_not_composable`
@@ -241,7 +241,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_minimal_action_client`
-  shortname: executables_in_`examples_rclcpp_minimal_action_client`
+  shortname: executables_in_`ex_6
   description: ''
   steps:
   - name: Check `action_client_not_composable`
@@ -277,7 +277,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclcpp_multithreaded_executor`
-  shortname: executables_in_`examples_rclcpp_multithreaded_executor`
+  shortname: executables_in_`ex_7
   description: ''
   steps:
   - name: Check `multithreaded_executor`
@@ -292,7 +292,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_action_server`
-  shortname: executables_in_`examples_rclpy_minimal_action_server`
+  shortname: executables_in_`ex_8
   description: ''
   steps:
   - name: Check `server_defer`
@@ -335,7 +335,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_action_client`
-  shortname: executables_in_`examples_rclpy_minimal_action_client`
+  shortname: executables_in_`ex_9
   description: ''
   steps:
   - name: Check `client_cancel`
@@ -364,7 +364,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_publisher`
-  shortname: executables_in_`examples_rclpy_minimal_publisher`
+  shortname: executables_in_`e_10
   description: ''
   steps:
   - name: Check `publisher_local_function`
@@ -393,7 +393,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_subscriber`
-  shortname: executables_in_`examples_rclpy_minimal_subscriber`
+  shortname: executables_in_`e_11
   description: ''
   steps:
   - name: Check `subscriber_lambda`
@@ -422,7 +422,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_client`
-  shortname: executables_in_`examples_rclpy_minimal_client`
+  shortname: executables_in_`e_12
   description: ''
   steps:
   - name: Check `client`
@@ -458,7 +458,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_minimal_service`
-  shortname: executables_in_`examples_rclpy_minimal_service`
+  shortname: executables_in_`e_13
   description: ''
   steps:
   - name: Check `service`
@@ -480,7 +480,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `examples_rclpy_executors`
-  shortname: executables_in_`examples_rclpy_executors`
+  shortname: executables_in_`e_14
   description: ''
   steps:
   - name: Check `callback_group`
@@ -530,7 +530,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `pendulum_control`
-  shortname: executables_in_`pendulum_control`
+  shortname: executables_in_`pend
   description: ''
   steps:
   - name: Check `pendulum_demo`
@@ -560,7 +560,7 @@ requirements:
   - linux
   links: null
 - name: Executables in `tlsf_cpp`
-  shortname: executables_in_`tlsf_cpp`
+  shortname: executables_in_`tlsf
   description: ''
   steps:
   - name: Check `tlsf_allocator_example`
@@ -576,7 +576,7 @@ requirements:
   - linux
   links: null
 - name: Executables in `rttest`
-  shortname: executables_in_`rttest`
+  shortname: executables_in_`rtte
   description: ''
   steps:
   - name: Run pendulum_demo to generate data
@@ -599,7 +599,7 @@ requirements:
   - linux
   links: null
 - name: Executables in `dummy_robot_bringup`
-  shortname: executables_in_`dummy_robot_bringup`
+  shortname: executables_in_`dumm
   description: ''
   steps:
   - name: Check `dummy_robot_bringup_launch.py`
@@ -628,7 +628,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `rviz2`
-  shortname: executables_in_`rviz_2`
+  shortname: executables_in_`rviz
   description: ''
   steps:
   - name: Check `rviz2`
@@ -643,7 +643,7 @@ requirements:
   - feature
   links: null
 - name: Executables in gz vendor packages
-  shortname: executables_in_gz_vendor_packages
+  shortname: executables_in_gz_ve
   description: You will need to install the `desktop-full` or `simulation` variants before running this test.
   steps:
   - name: Check `gz sim -v4 shapes.sdf`
@@ -674,7 +674,7 @@ requirements:
   - feature
   links: null
 - name: Executables in `rosbag2`
-  shortname: executables_in_`rosbag_2`
+  shortname: executables_in_`rosb
   description: ''
   steps:
   - name: Check `ros2 bag record -a`

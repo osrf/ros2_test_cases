@@ -1,5 +1,5 @@
-# ROS 2 Kilted Tutorial Party
-Welcome! The purpose of this repository is to guide the testing of various functionalities of ROS 2 Kilted Kaiju prior to official release.
+# ROS 2 Lyrical Tutorial Party
+Welcome! The purpose of this repository is to guide the testing of various functionalities of ROS 2 Lyrical Luth prior to official release.
 In other words, welcome to the Tutorial Party!
 The tutorial party will run between May 1, 2024 and May 15, 2024 (inclusive).
 Testing after that is welcome, but will not be included in the official statistics.
@@ -8,13 +8,13 @@ Testing after that is welcome, but will not be included in the official statisti
 Everyone, all contributions are welcome!
 
 ## How to contribute?
-The [Issues](https://github.com/osrf/ros2_test_cases/issues) page has several tickets each containing specific instructions to test a particular functionality of ROS 2 Kilted Kaiju.
+The [Issues](https://github.com/osrf/ros2_test_cases/issues) page has several tickets each containing specific instructions to test a particular functionality of ROS 2 Lyrical Luth.
 Each ticket will have the following sections:
 
 1. **Setup**: Details on the desired hardware and software setup for this test. The following combinations are possible.
    1. RMW vendor: `fastdds`, `cyclonedds`, `connextdds` or `zenoh`
    2. BuildType:
-      * `binary`: pre-built packaged ROS 2 workspace from [the releases page](https://github.com/ros2/ros2/releases/tag/release-kilted-beta-20250430)
+      * `binary`: pre-built packaged ROS 2 workspace from [the releases page](https://github.com/ros2/ros2/releases/tag/release-lyrical-beta-20250430) TODO fix link
       * `debian`: pre-built debian packages from the apt repository
       * `source`: building your own workspace from source
    3. Os: `Ubuntu Noble`, `Windows` and `RHEL-9`
@@ -26,7 +26,7 @@ Each ticket will have the following sections:
 When running tests with `zenoh`, remember to start the zenoh router by running `ros2 run rmw_zenoh_cpp rmw_zenohd` in a separate terminal.
 
 To contribute, first ensure if you have the relevant setup as described in the ticket.
-If you don't have the setup, you can find the installation instructions at http://docs.ros.org/en/kilted/Installation.html.
+If you don't have the setup, you can find the installation instructions at http://docs.ros.org/en/lyrical/Installation.html.
 Next, assign the ticket to yourself via the `Assignees` option or comment on the ticket indicating your interest.
 Then follow the instructions to perform the necessary checks.
 

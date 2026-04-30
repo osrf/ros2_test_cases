@@ -1,6 +1,6 @@
 requirements:
 - name: ros2cli on a local machine
-  shortname: ros_2_cli_on_a_local_machine
+  shortname: ros_2_cli_on_a_local
   description: |
     Test the basic functionality of the ros2cli package family
   steps:
@@ -150,7 +150,7 @@ requirements:
   - name: Repo URL
     url: https://github.com/ros2/ros2cli
 - name: ros2cli network tests
-  shortname: ros_2_cli_network_tests
+  shortname: ros_2_cli_network_te
   description: |
     Test the basic functionality of the ros2cli package family in an environment where nodes are running on other machines on the network.
   steps:
@@ -243,7 +243,7 @@ requirements:
   - name: Repo URL
     url: https://github.com/ros-visualization/rqt
 - name: Installation instructions
-  shortname: installation_instructions
+  shortname: installation_instruc
   description: |
     Follow the official installation instructions for the platform. If instructions have not been published for the platform, use the instructions for Rolling Ridley.
 
@@ -260,7 +260,7 @@ requirements:
   - name: Installation instructions
     url: https://docs.ros.org/en/kilted/Installation.html
 - name: Local workspace overlay
-  shortname: local_workspace_overlay
+  shortname: local_workspace_over
   description: |
     Build a package in a local workspace which depends on packages supplied for the platform.
 

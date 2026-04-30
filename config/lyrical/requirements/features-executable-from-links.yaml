@@ -1,6 +1,6 @@
 requirements:
 - name: Composition executables
-  shortname: composition_executables
+  shortname: composition_executab
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -14,7 +14,7 @@ requirements:
   - name: Composition demos
     url: https://github.com/ros2/demos/blob/kilted/composition/README.md
 - name: Demo Nodes (C++) executables
-  shortname: demo_nodes_(c++)_executables
+  shortname: demo_nodes_(c++)_exe
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -28,7 +28,7 @@ requirements:
   - name: Demo Nodes C++
     url: https://github.com/ros2/demos/blob/kilted/demo_nodes_cpp/README.md
 - name: Demo Nodes Native (C++) executables
-  shortname: demo_nodes_native_(c++)_executables
+  shortname: demo_nodes_native_(c
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -42,7 +42,7 @@ requirements:
   - name: Demo Nodes C++ native
     url: https://github.com/ros2/demos/blob/kilted/demo_nodes_cpp_native/README.md
 - name: Dummy Map Server executables
-  shortname: dummy_map_server_executables
+  shortname: dummy_map_server_exe
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -56,7 +56,7 @@ requirements:
   - name: Dummy Map Server
     url: https://github.com/ros2/demos/blob/kilted/dummy_robot/dummy_map_server/README.md#run
 - name: Dummy Sensors executables
-  shortname: dummy_sensors_executables
+  shortname: dummy_sensors_execut
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -70,7 +70,7 @@ requirements:
   - name: Dummy Sensors
     url: https://github.com/ros2/demos/blob/kilted/dummy_robot/dummy_sensors/README.md#run
 - name: Image Tools executables
-  shortname: image_tools_executables
+  shortname: image_tools_executab
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -84,7 +84,7 @@ requirements:
   - name: Image Tools
     url: https://github.com/ros2/demos/blob/kilted/image_tools/README.md#run
 - name: Intra-process executables
-  shortname: intra_process_executables
+  shortname: intra_process_execut
   description: ''
   steps:
   - name: The executables in the README are present and work as expected.
@@ -158,7 +158,7 @@ requirements:
   - name: Launch testing examples
     url: https://github.com/ros2/launch/blob/kilted/launch_testing/README.md#examples
 - name: Quality of Service Demos
-  shortname: quality_of_service_demos
+  shortname: quality_of_service_d
   description: ''
   steps:
   - name: Deadline with pause

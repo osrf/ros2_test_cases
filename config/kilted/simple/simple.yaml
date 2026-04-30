@@ -1,0 +1,62 @@
+test_cases_builders:
+  - name: Tutorial Party
+    shortname: tutorial_party
+    description: "Tutorial Party generation"
+    minimum_permutations_to_render: 0
+    permutations:
+      rmw:
+        - fastdds
+      buildType:
+        - source
+      os:
+        - windows
+      chip:
+        - amd64
+    set:
+      - !Include
+          all_labels: [docs]
+          negate: false
+      - !Include
+          all_labels: [feature]
+          negate: false
+      - !Include
+          all_labels: [core]
+          negate: false
+      - !Exclude
+          any_names: [Launch system]
+          negate: false
+      - !Exclude
+          any_names: [Webots]
+          negate: false
+      - !Exclude
+          any_names: [Deploying ROS 2 on IBM Cloud]
+          negate: false
+      - !Exclude
+          any_names: [Security on Two]
+          negate: false
+      - !Exclude
+          any_names: [Eclipse Oxygen with ROS 2 and rviz2]
+          negate: false
+      - !Exclude
+          any_names: [Building Realtime rt_preempt kernel for ROS 2]
+          negate: false
+      - !Exclude
+          any_names: [Releasing a ROS 2 package with bloom]
+          negate: false
+      - !Exclude
+          any_names: [Rosbag with ROS1 Bridge]
+          negate: false
+      - !Exclude
+          any_names: [Ignition]
+          negate: false
+      - !Exclude
+          all_labels: [windows, arm64]
+          # No arm64 on Windows
+          negate: false
+      - !Exclude
+          all_labels: [windows, debian]
+          # No debian packages on Windows
+          negate: false
+      - !Exclude
+          any_names: [Recording A Bag From Your Own Node Python]
+          negate: false

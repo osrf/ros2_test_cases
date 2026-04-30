@@ -1,3 +1,16 @@
+TODO
+
+Deployment explainer
+
+For this repo
+
+* Set Action permissions to write acecess
+* UPdate CONFIG_PATH for sync to be the full value not the test-case config.
+
+TODO below is outdated for lyrical and newer. This repo will self update it's issues for open ones using yatm-v2.
+
+
+
 ## Config files for YATM to create issue tickets from requirements
 
 ## Setup
